@@ -1,14 +1,15 @@
-### Hi there 👋
+### Hola, Mi nombre es Jorge Arguello 👋
+![Banner](Imagenes/banner.jpg)
 
-**JorgeArguello1999/JorgeArguello1999** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🤖 Programador de software dedicado con el aprendizaje de por vida 📘. 🇪🇨 **Jorge Argüello** o más conocido como *Al3x_Argu* en mis redes sociales. Comprometido con crear las herramientas 💻 y el contenido📷, del futuro.
 
-Here are some ideas to get you started:
+**Habilidades**
+- 🐍 Python 3
+- 💻 HTML, CSS, JavaScript y Django.
+- 🗄 MySQL y MariaDB
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+**Redes Sociales**
+- 📸 [Instagram: *al3x_argu*](https://www.instagram.com/al3x_argu/)
+- 🎞 [YouTube: *Jorge Alexander Arguello*](https://www.youtube.com/channel/UCVgabwEiFAunNH6c7abqoCQ)
+- 💼 [Linkedin: *Jorge Alexander Arguello*](https://www.linkedin.com/in/jorge-alexander-arg%C3%BCello-416701179)
+- 🐤 [Twitter: *Al3x_Argu*](https://twitter.com/Al3x_Argu)
