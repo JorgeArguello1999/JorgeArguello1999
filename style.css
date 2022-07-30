@@ -1,0 +1,37 @@
+body{
+	color: #b5b5b5;
+	background-color: #3c3c3c;
+}
+
+.nav{
+	background-color: #666666;
+	border-radius: 4em;
+	padding: 5em; 
+}
+
+.nav img, h1{
+	display: inline-block;
+}
+
+.nav p {
+	display: inline;
+}
+
+.nav img{
+	border-radius: 50%;
+	width: 8em;
+}
+
+.nav a{
+	text-decoration: none;
+	color: #b5b5b5;
+}
+
+
+.nav-menu{
+	text-align: right;
+}
+
+.nav-menu p{
+	padding: 1em;
+}
