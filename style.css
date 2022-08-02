@@ -9,21 +9,31 @@ body{
 	border-bottom-left-radius: 1em;
 	border-bottom-right-radius: 1em;
 }
-.nav img, h1{
-	display: inline-block;
+.nav p{
+	text-align: center;
 }
-.nav ul li {
+.nav img, h1{
+	display: block;
+	text-align: center;
+}
+.nav-menu ul li {
 	display: inline;
 	text-decoration: none;
 	padding: 1em;
 }
+/* Imagen del titulo */
 .nav img{
 	border-radius: 50%;
 	width: 8em;
+	padding-left: 45%;
+	padding-right: 45%;
 }
-.nav a{
+.nav-menu a{
 	text-decoration: none;
 	color: #b5b5b5;
+}
+#titulo{
+	margin: 0 auto;
 }
 /* Menu de contenidos */
 .nav-menu{
