@@ -3,3 +3,12 @@
 	text-transform: uppercase;
 	letter-spacing: 7px;
 }
+
+.galery img{
+	border-radius: 10%;
+	width: 95%;
+}
+
+.galery .col{
+	margin-bottom: 20px;
+}
