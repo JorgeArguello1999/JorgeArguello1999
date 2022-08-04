@@ -83,13 +83,30 @@ body{
 	display: block;
 }
 /* About Me */
-.sobre-mi p, img {
-	display: inline;
-}
 .sobre-mi img{
-	border-radius: 8em;
+	border-radius: 50%;
 }
-.sobre-mi p{
-	padding: 1em;  
-	text-align: right;
+.content{
+	padding-left: 40%;
+	padding-right: 40%;
+}
+.sobre-mi p {
+	text-align: center;
+}
+
+ @media only screen and (max-width: 1000px) {
+	body{
+		font-size: 25px;
+	}
+	.certificados iframe{
+		width: 584px;
+		margin-left: 20%;
+	}
+	.nav-menu{
+		font-size: 25px;
+	}
+	.content{
+		padding-left: 25%;
+		padding-right: 25%;
+	}
 }
