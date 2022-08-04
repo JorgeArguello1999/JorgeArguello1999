@@ -56,7 +56,11 @@ main{
 	padding: 1em;
 	border-radius: 0.5em;
 }
+.certificados {
+	margin: 0 auto;
+}
 .certificados img{
-	width: 100px;
+	width: 20rem;
+	padding: 2em;
 }
 
