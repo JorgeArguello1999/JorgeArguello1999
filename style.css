@@ -49,13 +49,25 @@ body{
 	border-radius: 0.3em;
 }
 /* Main */
-main{
+.dual-uno{
+	background-color: #666666;
+	color: white;
+	margin: 0 auto;
+	padding: 1em;
+	border-radius: 0.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.dual-dos{
 	background-color: white;
 	color: #666666;
 	margin: 0 auto;
 	padding: 1em;
 	border-radius: 0.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
+/* Certificates */
 .certificados {
 	margin: 0 auto;
 }
@@ -64,3 +76,20 @@ main{
 	padding: 2em;
 }
 
+.certificados iframe {
+	width: 100%;
+	height: 40em;
+	border: none;
+	display: block;
+}
+/* About Me */
+.sobre-mi p, img {
+	display: inline;
+}
+.sobre-mi img{
+	border-radius: 8em;
+}
+.sobre-mi p{
+	padding: 1em;  
+	text-align: right;
+}
