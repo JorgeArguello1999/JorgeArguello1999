@@ -5,8 +5,9 @@
 		<meta charset="UTF-8">
 		<title>Jorge Arguello</title>
 		<!--Icon -->
-		<link rel="icon" href="Imagenes/avatar_200.png" type="image/png">
-		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="images/avatar_200.png" type="image/png">
+		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="style/slider.css">
 
 	</head>
 	<body>
@@ -14,7 +15,7 @@
 		<!-- Menú de navegación -->
 		<nav>
 			<div class="nav">
-				<img src="Imagenes/avatar_200.png">
+				<img src="images/avatar_200.png">
 				<h1 id="titulo">Jorge Alexander Arguello</h1>
 				<p>🤖 Programador de software dedicado con el aprendizaje de por vida 📘. 🇪🇨 <b>Jorge Argüello</b> o más conocido como <i><b>Al3x_Argu</b></i> en mis redes sociales. Comprometido con crear las herramientas 💻 y el contenido📷, del futuro.</p>
 				<hr>
@@ -34,11 +35,22 @@
 			<!-- Sobre Mi -->
 			<div class="sobre-mi dual-uno" id="sobre-mi">
 				<h2>About Me ℹ️</h2>
+				
+				
 				<hr>
-				<div class="content">
-					<img src="Imagenes/avatar_400.png">
-				</div>
 				<p>Hola soy Jorge Arguello, desarrollador y enamorado de la informática</p>
+
+				<div class="slider">
+  				<div class="slide active">
+						<img src="images/Banner_1.png">
+  				</div>
+  				<div class="slide">
+    				<img src="images/Banner_2.png" alt="Slide 2">
+  				</div>
+  				<div class="slide">
+    				<img src="images/Banner_3.png" alt="Slide 3">
+  				</div>
+				</div>
 
 			</div>
 
@@ -46,8 +58,10 @@
 			<div class="certificados dual-dos" id="certificados">
 				<h2>Certificates 👨‍🎓</h2>
 				<hr>
-				<iframe src="Imagenes/Certificates/index.html" scrolling="auto">
+
+				<iframe src="images/Certificates/index.html" scrolling="auto">
 				</iframe>
+				
 			</div>
 
 			<!-- Proyectos -->
@@ -74,7 +88,21 @@
 		</main>
 
 		<footer>
+		<div class="nav-menu">
+			<h1 align="center">JorgeArguello1999</h1>
+			<ul>
+				<li><a href="#sobre-mi">About Me ℹ️</a></li>
+				<li><a href="#certificados">Certificates 👨‍🎓</a></li>
+				<li><a href="#proyectos">Projects 📝</a></li>
+				<li><a href="#contacto">Contact me ☎</a></li>
+			</ul>
+			<p>Web Page is free software you can use this page</p>
+		</div>
+			
 		</footer>
+
+		<script src="scripts/slider.js">
+		</script>
 
 	</body>
 </html>
