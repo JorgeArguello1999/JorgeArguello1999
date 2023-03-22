@@ -1,5 +1,5 @@
 ### Hola, Mi nombre es Jorge Arguello 👋
-![Banner](Imagenes/banner.jpg)
+![Banner](images/banner.jpg)
 
 🤖 Programador de software dedicado con el aprendizaje de por vida 📘. 🇪🇨 **Jorge Argüello** o más conocido como *Al3x_Argu* en mis redes sociales. Comprometido con crear las herramientas 💻 y el contenido📷, del futuro.
 
