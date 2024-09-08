@@ -32,7 +32,7 @@
     <a href="https://instagram.com/al3x_argu" target="blank">
         <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="al3x_argu" height="30" width="40" />
     </a>
-    <a href="https://www.youtube.com/c/jorge alexander arguello" target="blank">
+    <a href="https://www.youtube.com/@al3x_argu" target="blank">
         <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="jorge alexander arguello" height="30" width="40" />
     </a>
 </p>
