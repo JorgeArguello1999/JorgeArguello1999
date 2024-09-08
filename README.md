@@ -1,16 +1,18 @@
-### Hola, Mi nombre es Jorge Arguello 👋
-![Banner](images/banner.jpg)
+<h1 align="center">Hi 👋, I'm Jorge Arguello</h1>
+<h3 align="center">🤖 Dedicated software programmer with lifelong learning 📘. 🇪🇨 Jorge Argüello or better known as Al3x_Argu in my social networks. Committed to creating the tools 💻 and content📷, of the future.</h3>
 
-🤖 Programador de software dedicado con el aprendizaje de por vida 📘. 🇪🇨 **Jorge Argüello** o más conocido como *Al3x_Argu* en mis redes sociales. Comprometido con crear las herramientas 💻 y el contenido📷, del futuro.
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://twitter.com/al3x_argu" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="al3x_argu" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/jorge alexander argüello" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="jorge alexander argüello" height="30" width="40" /></a>
+<a href="https://instagram.com/al3x_argu" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="al3x_argu" height="30" width="40" /></a>
+</p>
 
-**Habilidades**
-- 🐍 Python 3
-- 💻 HTML, CSS, JavaScript y Django.
-- 🗄 MySQL y MariaDB
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://mariadb.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" alt="mariadb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://opencv.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.qt.io/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg" alt="qt" width="40" height="40"/> </a> <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/> </a> </p>
 
-**Redes Sociales**
-- 📸 [Instagram: *al3x_argu*](https://www.instagram.com/al3x_argu/)
-- 🎞 [YouTube: *Jorge Alexander Arguello*](https://www.youtube.com/channel/UCVgabwEiFAunNH6c7abqoCQ)
-- 💼 [Linkedin: *Jorge Alexander Arguello*](https://www.linkedin.com/in/jorge-alexander-arg%C3%BCello-416701179)
-- 🐤 [Twitter: *Al3x_Argu*](https://twitter.com/Al3x_Argu)
-- 👨‍💻 [Página Personal](https://jorgearguello1999.github.io/JorgeArguello1999/)
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=jorgearguello1999&show_icons=true&locale=en&layout=compact" alt="jorgearguello1999" /></p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jorgearguello1999&show_icons=true&locale=en" alt="jorgearguello1999" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=jorgearguello1999&" alt="jorgearguello1999" /></p>
