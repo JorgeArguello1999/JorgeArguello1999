@@ -1,0 +1,45 @@
+/* Base styling for the page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a23;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.image {
+    margin-top: 20px;
+    margin: 2em;
+}
+
+/* Styling the image of Jorge with rounded corners */
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.intro {
+    font-size: 1.8em;
+    font-weight: 300;
+    color: #ffd700;
+}

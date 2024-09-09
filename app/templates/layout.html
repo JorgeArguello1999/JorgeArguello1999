@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
+    <title>Jorge Argüello | Al3x_Argu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <div class="container">
-        {% block content %}{% endblock %}
+        <div class="image">
+            <img class="profile-img" src="{{ url_for('static', filename='avatar.png') }}" alt="Jorge Argüello Profile Picture">
+        </div>
     </div>
+
+    <!-- This block will be used to insert other sections dynamically -->
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>🤖 Dedicated Software Developer with a passion for lifelong learning 📘.</p>
+        <p>🇪🇨 Jorge Argüello, also known as Al3x_Argu on social media.</p>
+        <p>Committed to building future tools 💻 and content 📷.</p>
+    </div>
+
 </body>
 </html>
