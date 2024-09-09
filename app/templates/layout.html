@@ -17,12 +17,26 @@
         </div>
     </div>
 
-    <!-- This block will be used to insert other sections dynamically -->
+    <!-- Main Content -->
     <div class="container">
         <h1>Welcome</h1>
         <p>🤖 Dedicated Software Developer with a passion for lifelong learning 📘.</p>
         <p>🇪🇨 Jorge Argüello, also known as Al3x_Argu on social media.</p>
         <p>Committed to building future tools 💻 and content 📷.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#blog">Blog</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#contact">Contact</a>
+        <a href="#gallery">Gallery</a>
+    </div>
+
+    <div class="content"> 
+        {% block content %}
+        {% endblock %}
     </div>
 
 </body>

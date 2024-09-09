@@ -43,3 +43,30 @@ p {
     font-weight: 300;
     color: #ffd700;
 }
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #0a0a23;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    align-items: center;
+    padding: 1em;
+}
+
+.navbar a:hover{
+    background-color: white;
+    color: black;
+}
+
+.navbar a::before {
+    content: attr(data-icon);
+    margin-right: 8px;
+}
