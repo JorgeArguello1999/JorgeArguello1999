@@ -9,9 +9,9 @@
 
 - 👯 I’m looking to collaborate on **PyCommunity-es**
 
-- 👨‍💻 All of my projects are available at [jorgearguello.net](jorgearguello.net)
+- 👨‍💻 All of my projects are available at [jorgearguello.net](https://jorgearguello.net)
 
-- 📝 I regularly write articles on [jorgearguello.net/blog/](jorgearguello.net/blog/)
+- 📝 I regularly write articles on [jorgearguello.net/blog/](https://jorgearguello.net/blog/)
 
 - 💬 Ask me about **Anything**
 
