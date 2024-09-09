@@ -11,3 +11,8 @@ main = Blueprint('main', __name__)
 @main.route('/')
 def home():
     return render_template('main.html')
+
+# Blog
+@main.route('/blog')
+def blog():
+    return render_template('blog.html')
