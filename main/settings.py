@@ -14,7 +14,7 @@ SECRET_KEY = getenv('DJANGO_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = getenv('DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1', getenv('DOMAIN')]
+ALLOWED_HOSTS = ['127.0.0.1', 'www.jorgearguello.net', 'jorgearguello.net', getenv('SERVER_IP')]
 
 
 # Application definition
@@ -109,3 +109,6 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Static files for collectstatic
+STATIC_ROOT = 'staticfiles'
