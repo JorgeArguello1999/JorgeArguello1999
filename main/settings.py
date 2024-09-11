@@ -111,5 +111,8 @@ STATIC_URL = '/static/'
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Static files for collectstatic
-STATIC_ROOT = 'staticfiles'
+import os 
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
