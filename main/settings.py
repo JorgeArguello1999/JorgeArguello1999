@@ -26,8 +26,11 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+OWN_APPS = [
+    'home',
+]
 
-INSTALLED_APPS = DJANGO_APPS
+INSTALLED_APPS = DJANGO_APPS + OWN_APPS
 
 # Middleware
 MIDDLEWARE = [
@@ -42,10 +45,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'main.urls'
 
+# Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [  BASE_DIR / "templates" ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Argüello | Al3x_Argu</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'avatar.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="image">
+                <img class="profile-img" src="{% static 'avatar.png' %}" alt="Jorge Argüello Profile Picture">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+            <h1>👋 Welcome</h1>
+            <p>🤖 Dedicated Software Developer with a passion for lifelong learning 📘.</p>
+            <p>🇪🇨 Jorge Argüello, also known as Al3x_Argu on social media.</p>
+            <p>Committed to building future tools 💻 and content 📷.</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="dev-container">
+        <div class="navbar">
+            <a href="#home">🏠 Home</a>
+            <a href="#blog">📝 Blog</a>
+            <a href="#experiences">🧪 Experiences</a>
+            <a href="#contact">☎️ Contact</a>
+            <a href="#gallery">📷 Gallery</a>
+        </div>
+
+        <div class="content"> 
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
