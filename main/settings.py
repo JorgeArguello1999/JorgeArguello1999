@@ -1,6 +1,7 @@
 # Environment values
 from dotenv import load_dotenv
 from os import getenv
+from os import environ
 load_dotenv()
 
 from pathlib import Path
@@ -12,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv('DJANGO_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv('DEBUG')
+DEBUG = bool( environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.jorgearguello.net', 'jorgearguello.net', getenv('SERVER_IP')]
 
