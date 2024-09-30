@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge Argüello | Al3x_Argu</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='avatar.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'avatar.png' %}" type="image/x-icon">
 </head>
 
 <body>
     <div class="header">
         <div class="container">
             <div class="image">
-                <img class="profile-img" src="{{ url_for('static', filename='avatar.png') }}" alt="Jorge Argüello Profile Picture">
+                <img class="profile-img" src="{% static 'avatar.png' %}" alt="Jorge Argüello Profile Picture">
             </div>
         </div>
 
@@ -30,8 +31,8 @@
     <!-- Navigation Bar -->
     <div class="dev-container">
         <div class="navbar">
-            <a href="#home">🏠 Home</a>
-            <a href="#blog">📝 Blog</a>
+            <a href="{% url 'home' %}">🏠 Home</a>
+            <a href="{% url 'blog' %}">📝 Blog</a>
             <a href="#experiences">🧪 Experiences</a>
             <a href="#contact">☎️ Contact</a>
             <a href="#gallery">📷 Gallery</a>
