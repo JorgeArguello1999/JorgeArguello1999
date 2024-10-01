@@ -7,11 +7,15 @@ Still working here
 
 <ul>
     {% for entry in blogs_entry_titles %}
-    <li>{{ entry }}</li>
+
+    <li>{{ entry.title }}</li>
+    <li>{{ entry.created_at|date:"d M Y" }}</li>
+
     {% empty %}
     <li>Blogs entry is empty</li>
     <li>None</li>
     {% endfor %}
+
 </ul>
 
 {% endblock %}
