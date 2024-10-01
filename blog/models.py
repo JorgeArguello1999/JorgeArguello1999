@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 # Table for Blogs Entries
-class blog_post(models.Model):
+class blog_entry(models.Model):
     title = models.CharField(max_length=300)
     content = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
