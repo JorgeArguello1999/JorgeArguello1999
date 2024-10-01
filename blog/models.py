@@ -14,9 +14,5 @@ class blog_entry(models.Model):
     github_url = models.URLField(blank=True, null=True)
     external_url = models.URLField(blank=True, null=True)
 
-    class Meta:
-        # Order by date DESC
-        ordening = ['-created_at']
-    
     def __str__(self) -> str:
         return self.title
