@@ -2,4 +2,16 @@
 
 {% block content %}
 Still working here
+
+<h1>Blogs Entrys</h1>
+
+<ul>
+    {% for entry in blogs_entry_titles %}
+    <li>{{ entry }}</li>
+    {% empty %}
+    <li>Blogs entry is empty</li>
+    <li>None</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
