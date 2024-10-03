@@ -3,6 +3,7 @@ from django.utils import timezone
 
 # Table for Blogs Entries
 class blog_entry(models.Model):
+    blog_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=300)
     content = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
@@ -13,6 +14,9 @@ class blog_entry(models.Model):
     twitter_url = models.URLField(blank=True, null=True)
     github_url = models.URLField(blank=True, null=True)
     external_url = models.URLField(blank=True, null=True)
+
+    # Image URL
+    image_url = models.URLField(blank=True, null=True)
 
     def __str__(self) -> str:
         return self.title
