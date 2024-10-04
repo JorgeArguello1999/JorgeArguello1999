@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-Still working here
+<link rel="stylesheet" href="{% static 'blog_style.css' %}">
+
+<h1 class="blog-title">Blog Entries</h1>
+
+<div class="blog-container">
+    <ul>
+        {% for entry in blogs_entry_titles %}
+            {% if entry.blog_id %}
+                <li class="blog-entry">
+                    <h2><a href="{% url 'blog_detail' entry.blog_id %}">{{ entry.title }}</a></h2>
+                    <p class="blog-date">{{ entry.created_at|date:"d M Y" }}</p>
+                    <img src="{{ entry.image_url }}" alt="">
+                </li>
+            {% endif %}
+
+        {% empty %}
+            <li>No blog entries found.</li>
+        {% endfor %}
+    </ul>
+</div>
+
 {% endblock %}

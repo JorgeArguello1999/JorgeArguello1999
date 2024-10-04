@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ data.title }}</h1>
+<div class="date">{{ data.created_at }}</div>
+<p>{{ data.content | safe  }}</p>
+
+<ul>
+    {% if data.instagram_url %}
+        <li><a href="{{ data.instagram_url }}" target="_blank">Instagram</a></li>
+    {% endif %}
+    
+    {% if data.youtube_url %}
+        <li><a href="{{ data.youtube_url }}" target="_blank">YouTube</a></li>
+    {% endif %}
+    
+    {% if data.twitter_url %}
+        <li><a href="{{ data.twitter_url }}" target="_blank">Twitter</a></li>
+    {% endif %}
+    
+    {% if data.github_url %}
+        <li><a href="{{ data.github_url }}" target="_blank">Github</a></li>
+    {% endif %}
+    
+    {% if data.external_url %}
+        <li><a href="{{ data.external_url }}" target="_blank">External</a></li>
+    {% endif %}
+</ul>
+
+{% endblock %}
