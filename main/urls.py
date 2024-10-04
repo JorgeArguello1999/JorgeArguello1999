@@ -7,4 +7,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('blog/', include('blog.urls')),
     path('experiences/', include('experiences.urls')),
+    path('contact/', include('contact.urls')),
 ]

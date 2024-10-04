@@ -31,6 +31,7 @@ OWN_APPS = [
     'home',
     'blog',
     'experiences',
+    'contact',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + OWN_APPS

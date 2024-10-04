@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .contact-table th, .contact-table td {
+            padding: 12px 15px;
+        }
+
+        .contact-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .contact-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .contact-table tr:hover {
+            background-color: #ddd;
+        }
+
+        .contact-table td {
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+
+    <table class="contact-table">
+        <thead>
+            <tr>
+                <th>Contacto</th>
+                <th>Información</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Correo</td>
+                <td>al3x.argu@protonmail.com</td>
+            </tr>
+            <tr>
+                <td>Redes Sociales</td>
+                <td>al3x_argu</td>
+            </tr>
+            <tr>
+                <td>Twitter</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Instagram</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
