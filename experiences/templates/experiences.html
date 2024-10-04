@@ -1,5 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-hi
+
+<ul>
+    {% for exp in data %}
+    <li>{{ exp.title }}</li>
+    <li>{{ exp.description }}</li>
+    <li>{{ exp.organization }}</li>
+    <li>{{ exp.date_from }}</li>
+    {{ exp.date_to }}
+    {{ exp.get_experience_type_display }}
+    {{ exp.diploma_url }}
+    {{ exp.image_url }}
+    {{ exp.project_url }}
+    {{ exp.created_at }}
+    <hr>
+    {% endfor %}
+</ul>
+    
 {% endblock %}
