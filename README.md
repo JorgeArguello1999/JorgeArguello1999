@@ -3,8 +3,6 @@
 
 <hr>
 
-- 🔭 I’m currently working on **University**
-
 - 🌱 I’m currently learning **Python, Rust and JavaScript**
 
 - 👯 I’m looking to collaborate on **PyCommunity-es**
@@ -13,9 +11,9 @@
 
 - 📝 I regularly write articles on [jorgearguello.net/blog/](https://jorgearguello.net/blog/)
 
-- 💬 Ask me about **Anything**
+- 💬 Ask me about **Linux and open source**
 
-- 📫 How to reach me **al3x.argu@protonmail.com**
+- 📫 How to reach me **jorge.arguello1999@gmail.com**
 
 - 📄 Know about my experiences [jorgearguello1999.net/](jorgearguello1999.net/)
 
@@ -26,7 +24,7 @@
     <a href="https://twitter.com/al3x_argu" target="blank">
         <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="al3x_argu" height="30" width="40" />
     </a>
-    <a href="https://www.linkedin.com/in/jorge-alexander-arg%C3%BCello-416701179/" target="blank">
+    <a href="https://www.linkedin.com/in/jorgearguello1999" target="blank">
         <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="jorge alexander argüello" height="30" width="40" />
     </a>
     <a href="https://instagram.com/al3x_argu" target="blank">
