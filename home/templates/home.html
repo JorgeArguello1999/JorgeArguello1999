@@ -1,6 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Welcome to my website!</h1>
-    <p>My name is Jorge Arguello and I am a software developer.</p>
+<section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 dark:bg-gray-900">
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+    <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+
+      <h2 class="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
+        🚀 Hi, I'm Jorge Argüello! 👨‍💻🐍
+      </h2>
+
+      <p class="hidden text-gray-500 md:mt-4 md:block dark:text-gray-300">
+        Passionate Python Developer & tech enthusiast, always looking for new challenges! I love building scalable and efficient software solutions, specializing in backend, AI, and automation 🤖.
+
+        <br><br>
+        I'm deeply involved in open-source projects and constantly expanding my skills in Rust, JavaScript, and more.
+        
+        <br>
+        <br>
+        When I’m not coding, I enjoy capturing moments through photography 📷. Always eager to learn, create, and collaborate!
+      </p>
+
+      <div class="mt-4 md:mt-8">
+        <a
+          href="#"
+          class="inline-block rounded-sm bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"
+        >
+          Get Started Today
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <img
+    alt="My profile picture"
+    src="https://avatars.githubusercontent.com/u/46856713?v=4"
+    class="h-56 w-full object-cover sm:h-full"
+  />
+</section>
+
 {% endblock %}
