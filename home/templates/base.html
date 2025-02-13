@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge Arguello | Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/46856713?v=4" type="image/x-icon">
 </head>
-<body>
-
-    {% block content %}
-
-    {% endblock %}
-
-    <footer>
-        <p>&copy; 2020 Jorge Arguello</p>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <header class="flex justify-between items-center p-5 bg-white dark:bg-gray-800 shadow-md">
+        <div class="flex items-center">
+            <img src="https://avatars.githubusercontent.com/u/46856713?v=4" alt="Jorge Arguello" class="w-12 h-12 rounded-full mr-4">
+            <h1 class="text-xl font-bold">Jorge Arguello | Al3x_Argu</h1>
+        </div>
+    </header>
+    
+    <main class="max-w-4xl mx-auto p-5">
+        <div class="relative w-full overflow-hidden rounded-lg shadow-lg">
+            <div class="flex transition-transform duration-500 ease-in-out transform translate-x-0" id="slider">
+            </div>
+        </div>
+    </main>
+    
+    <footer class="text-center p-5 mt-5 bg-white dark:bg-gray-800 shadow-md">
+        <p>&copy; 2025 Jorge Arguello</p>
     </footer>
     
+    <script>
+    </script>
 </body>
 </html>
