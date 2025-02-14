@@ -1,10 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Hello, this page is still under development, but for the moment I can tell you that I am a Backend developer, my favorite technology is Python, besides working with MySQL, MariaDB, PostgreSQL or MongoDB. I know Linux and I love the Open Source world. 
+<section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 dark:bg-gray-900">
+  <div class="p-8 md:p-12 lg:px-16 lg:py-24 sm:order-1">
+    <div class="mx-auto max-w-xl text-center sm:text-left">
+      <h2 class="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
+        {{ user.user }}
+      </h2>
 
+      <p class="text-gray-500 md:mt-4 md:block dark:text-gray-300">
+        {{ user.description | linebreaksbr }}
+      </p>
+    </div>
+  </div>
 
-<br>
-<br>
-Nothing more to say, see you later. 
+  <img
+    alt="My profile picture"
+    src="{{ profile.image}}"
+    class="h-56 w-full object-cover sm:h-full sm:order-2"
+  />
+</section>
 {% endblock %}

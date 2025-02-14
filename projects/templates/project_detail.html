@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <h1 class="text-3xl font-bold text-gray-900 dark:text-white text-center mb-4">
+    {{ project.title }}
+  </h1>
+
+  <img
+    src="{{ project.image }}"
+    alt="{{ project.title }}"
+    class="w-full h-64 object-cover rounded-md"
+  />
+
+  <p class="mt-4 text-gray-700 dark:text-gray-300 whitespace-pre-line">
+    {{ project.description | safe }}
+  </p>
+
+  {% if project.usage %}
+  <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Usage:</h2>
+  <p class="mt-2 text-gray-700 dark:text-gray-300 whitespace-pre-line">
+    {{ project.usage | safe }}
+  </p>
+  {% endif %}
+
+  {% if project.youtube %}
+  <div class="mt-6">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Demo:</h2>
+    <iframe class="w-full h-64 rounded-md mt-2" src="{{ project.youtube }}" allowfullscreen></iframe>
+  </div>
+  {% endif %}
+
+  {% if project.github %}
+  <div class="mt-6 flex justify-center">
+    <a href="{{ project.github }}" target="_blank" class="px-6 py-3 bg-gray-800 text-white font-bold rounded-lg transition hover:bg-gray-700">
+      View on GitHub
+    </a>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}
