@@ -5,17 +5,11 @@
   <div class="p-8 md:p-12 lg:px-16 lg:py-24 sm:order-1">
     <div class="mx-auto max-w-xl text-center sm:text-left">
       <h2 class="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
-        🚀 Hi, I'm Jorge Argüello! 👨‍💻🐍
+        {{ user.user }}
       </h2>
 
       <p class="text-gray-500 md:mt-4 md:block dark:text-gray-300">
-        Passionate Python Developer & tech enthusiast, always looking for new challenges! I love building scalable and efficient software solutions, specializing in backend, AI, and automation 🤖.
-
-        <br><br>
-        I'm deeply involved in open-source projects and constantly expanding my skills in Rust, JavaScript, and more.
-
-        <br><br>
-        When I’m not coding, I enjoy capturing moments through photography 📷. Always eager to learn, create, and collaborate!
+        {{ user.description | linebreaksbr }}
       </p>
     </div>
   </div>
