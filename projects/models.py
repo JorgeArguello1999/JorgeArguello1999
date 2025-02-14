@@ -13,6 +13,7 @@ class Project(models.Model):
     image = models.URLField()
     youtube = models.URLField(blank=True, null=True) 
     skills = models.ManyToManyField(Skill, blank=True)  
+    github = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.title
