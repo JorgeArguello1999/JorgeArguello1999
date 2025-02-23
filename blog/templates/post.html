@@ -27,6 +27,7 @@
             </div>
 
             <!-- Skills -->
+            {% if entry.skills.all %}
             <div class="mt-8">
                 <h2 class="text-xl font-semibold text-white mb-4">Related Skills</h2>
                 <div class="flex flex-wrap gap-2">
@@ -37,6 +38,7 @@
                     {% endfor %}
                 </div>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
