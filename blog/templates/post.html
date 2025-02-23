@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Container for image and text -->
+    <div class="flex flex-col md:flex-row gap-8 bg-gray-900/80 backdrop-blur-sm rounded-lg shadow-lg p-6 border border-gray-800">
+        <!-- Image Section -->
+        <div class="md:w-1/3">
+            {% if entry.image %}
+            <img src="{{ entry.image }}" alt="{{ entry.title }}" class="rounded-lg shadow-md w-full h-auto border border-gray-800">
+            {% endif %}
+        </div>
+
+        <!-- Text Section -->
+        <div class="md:w-2/3">
+            <!-- Title -->
+            <h1 class="text-3xl font-bold text-white mb-4">{{ entry.title }}</h1>
+
+            <!-- Date -->
+            <p class="text-sm text-gray-400 mb-6">
+                Published on: <span class="font-medium text-gray-300">{{ entry.date|date:"F j, Y" }}</span>
+            </p>
+
+            <!-- Content -->
+            <div class="prose prose-lg text-gray-300">
+                {{ entry.content|safe }}
+            </div>
+
+            <!-- Skills -->
+            {% if entry.skills.all %}
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold text-white mb-4">Related Skills</h2>
+                <div class="flex flex-wrap gap-2">
+                    {% for skill in entry.skills.all %}
+                    <span class="bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full border border-blue-800/50">
+                        {{ skill.title }}
+                    </span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

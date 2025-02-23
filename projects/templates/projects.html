@@ -48,7 +48,7 @@
       {% endif %}
 
       <a
-        href="{% url 'projects' %}/{{ project.title | lower }}"
+        href="{% url 'projects' %}{{ project.title | lower }}"
         class="block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
       >
         Read Project
