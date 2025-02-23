@@ -2,6 +2,10 @@
 
 {% block content %}
 
+<h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-6">
+  🗒️ My Blog 🗒️
+</h2>
+
 {% for post in entries %}
 <article class="flex bg-white transition hover:shadow-xl dark:bg-gray-900 dark:shadow-gray-800/25">
   <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
@@ -40,7 +44,7 @@
 
     <div class="sm:flex sm:items-end sm:justify-end">
       <a
-        href="{% url 'blog' %}/{{ post.id }}"
+        href="{% url 'blog' %}{{ post.id }}"
         class="block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
       >
         Read Blog
