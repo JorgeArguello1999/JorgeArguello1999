@@ -2,35 +2,41 @@
 
 {% block content %}
 <div class="max-w-4xl mx-auto px-4 py-8">
-    <!-- Title -->
-    <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ entry.title }}</h1>
+    <!-- Container for image and text -->
+    <div class="flex flex-col md:flex-row gap-8 bg-gray-900/80 backdrop-blur-sm rounded-lg shadow-lg p-6 border border-gray-800">
+        <!-- Image Section -->
+        <div class="md:w-1/3">
+            {% if entry.image %}
+            <img src="{{ entry.image }}" alt="{{ entry.title }}" class="rounded-lg shadow-md w-full h-auto border border-gray-800">
+            {% endif %}
+        </div>
 
-    <!-- Date -->
-    <p class="text-sm text-gray-600 mb-6">
-        Published on: <span class="font-medium">{{ entry.date|date:"F j, Y" }}</span>
-    </p>
+        <!-- Text Section -->
+        <div class="md:w-2/3">
+            <!-- Title -->
+            <h1 class="text-3xl font-bold text-white mb-4">{{ entry.title }}</h1>
 
-    <!-- Image -->
-    {% if entry.image %}
-    <div class="mb-8">
-        <img src="{{ entry.image }}" alt="{{ entry.title }}" class="rounded-lg shadow-lg w-full">
-    </div>
-    {% endif %}
+            <!-- Date -->
+            <p class="text-sm text-gray-400 mb-6">
+                Published on: <span class="font-medium text-gray-300">{{ entry.date|date:"F j, Y" }}</span>
+            </p>
 
-    <!-- Content -->
-    <div class="prose prose-lg text-gray-700">
-        {{ entry.content|safe }}
-    </div>
+            <!-- Content -->
+            <div class="prose prose-lg text-gray-300">
+                {{ entry.content|safe }}
+            </div>
 
-    <!-- Skills -->
-    <div class="mt-8">
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">Related Skills</h2>
-        <div class="flex flex-wrap gap-2">
-            {% for skill in entry.skills.all %}
-            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                {{ skill.title }}
-            </span>
-            {% endfor %}
+            <!-- Skills -->
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold text-white mb-4">Related Skills</h2>
+                <div class="flex flex-wrap gap-2">
+                    {% for skill in entry.skills.all %}
+                    <span class="bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full border border-blue-800/50">
+                        {{ skill.title }}
+                    </span>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </div>
