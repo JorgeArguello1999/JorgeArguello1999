@@ -2,9 +2,9 @@
 <h3 align="center">Software Developer | Open Source Enthusiast | Lifelong Learner</h3>
 
 <p align="center">
-  <a href="https://jorgearguello.net">🌍 Portfolio</a> •
-  <a href="https://jorgearguello.net/blog/">📝 Blog</a> •
-  <a href="mailto:al3x.argu@protonmail.com">📩 Contact</a>
+  <a href="https://www.jorgearguello.net">🌍 Portfolio</a> •
+  <a href="https://www.jorgearguello.net/blog/">📝 Blog</a> •
+  <a href="mailto:contact@jorgearguello.net">📩 Contact</a>
 </p>
 
 ---
