@@ -1,22 +1,33 @@
-# My Website (Don't merge this branch)
+# Jorge Argüello — Personal Website
 
-## Start project (Deploy)
+A minimalist, accessible, dark-themed static website with EN / ES / KO translations.
+
+## Structure
+
+```
+├── index.html          # Home / gallery page
+├── about/              # About me section
+│   └── index.html
+├── projects/           # Projects section
+│   └── index.html
+├── blog/               # Blog section
+│   └── index.html
+├── css/
+│   └── theme.css       # Dark theme and shared styles
+└── js/
+    └── i18n.js         # Translation engine (EN / ES / KO)
+```
+
+## Run locally
+
 ```bash
-./build.sh
+python3 -m http.server 8000
 ```
 
-## Start project (Develop)
-```
-pip install -r requirements.txt 
+Then open http://localhost:8000
 
-python manage.py migrate
+## Deploy to GitHub Pages
 
-# Create a .env file
+Push to your repository and enable GitHub Pages from the branch you use for deployment.
 
-python manage.py runserver
-```
-
-```bash
-DJANGO_KEY="Your secret key for Django"
-DEBUG=True
-```
+The site is fully static: no build step required.
