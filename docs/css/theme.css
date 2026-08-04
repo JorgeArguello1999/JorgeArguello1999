@@ -74,6 +74,25 @@ main { padding: 48px 0 40px; }
 .hero .tagline { font-size: 1.2rem; color: var(--text-muted); margin: 0 0 4px; }
 .avatar { width: 92px; height: 92px; border-radius: 50%; object-fit: cover; margin-bottom: 14px; border: 2px solid var(--border); }
 
+.hero-status {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  margin: 18px 0 0; padding: 0;
+  font-size: 0.95rem; color: var(--text-muted);
+  list-style: none;
+}
+.hero-status span { display: inline-flex; align-items: center; gap: 6px; }
+.hero-status [data-i18n] { color: var(--text); font-weight: 500; }
+
+.hero-social { display: flex; gap: 16px; margin: 16px 0 0; }
+.hero-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text); font-size: 1.05rem; text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.hero-social a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
 section { margin: 0 0 64px; }
 section h2 { font-size: 1.7rem; margin: 0 0 6px; }
 .section-lead { color: var(--text-muted); margin: 0 0 16px; }
