@@ -10,9 +10,12 @@
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-  <header class="site-header">
+  <header class="site-header is-solid">
     <div class="nav-inner">
-      <a class="brand" href="../index.html">Jorge Argüello</a>
+      <a class="brand" href="../index.html">
+        <img class="brand-avatar" src="https://avatars.githubusercontent.com/u/46856713?s=400&u=9224dd3c0f1e0ba8ec4a11ec9fc0a34bb94e0df0&" alt="Jorge Argüello profile picture">
+        <span data-i18n="brandName">Jorge Argüello</span>
+      </a>
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li><a href="../about/" data-i18n="navAbout">About</a></li>
@@ -21,9 +24,9 @@
         </ul>
       </nav>
       <div class="lang-switch" role="group" aria-label="Language selection">
-        <button data-i18n-lang="en" aria-pressed="false">EN</button>
-        <button data-i18n-lang="es" aria-pressed="false">ES</button>
-        <button data-i18n-lang="ko" aria-pressed="false">KO</button>
+        <button data-i18n-lang="en" aria-pressed="false"><span class="flag" aria-hidden="true">🇺🇸</span> EN</button>
+        <button data-i18n-lang="es" aria-pressed="false"><span class="flag" aria-hidden="true">🇪🇸</span> ES</button>
+        <button data-i18n-lang="ko" aria-pressed="false"><span class="flag" aria-hidden="true">🇰🇷</span> KO</button>
       </div>
     </div>
   </header>
@@ -77,6 +80,7 @@
       en: {
         skip: "Skip to main content",
         navAbout: "About", navProjects: "Projects", navBlog: "Blog",
+        brandName: "Jorge Argüello",
         backHome: "← Back to home",
         projectsTitle: "Projects",
         projectsLead: "A selection of things I've built and contributed to.",
@@ -102,6 +106,7 @@
       es: {
         skip: "Saltar al contenido principal",
         navAbout: "Sobre mí", navProjects: "Proyectos", navBlog: "Blog",
+        brandName: "Jorge Argüello",
         backHome: "← Volver al inicio",
         projectsTitle: "Proyectos",
         projectsLead: "Una selección de lo que he construido y a lo que he contribuido.",
@@ -127,6 +132,7 @@
       ko: {
         skip: "본문으로 건너뛰기",
         navAbout: "소개", navProjects: "프로젝트", navBlog: "블로그",
+        brandName: "호르헤 아르게요",
         backHome: "← 홈으로 돌아가기",
         projectsTitle: "프로젝트",
         projectsLead: "제가 만들고 기여한 작업들을 소개합니다.",

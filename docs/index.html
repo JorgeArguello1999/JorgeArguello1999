@@ -10,9 +10,12 @@
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="nav-inner">
-      <a class="brand" href="index.html">Jorge Argüello</a>
+      <a class="brand" href="index.html">
+        <img class="brand-avatar" src="https://avatars.githubusercontent.com/u/46856713?s=400&u=9224dd3c0f1e0ba8ec4a11ec9fc0a34bb94e0df0&" alt="Jorge Argüello profile picture">
+        <span data-i18n="brandName">Jorge Argüello</span>
+      </a>
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li><a href="about/" data-i18n="navAbout">About</a></li>
@@ -21,9 +24,9 @@
         </ul>
       </nav>
       <div class="lang-switch" role="group" aria-label="Language selection">
-        <button data-i18n-lang="en" aria-pressed="false">EN</button>
-        <button data-i18n-lang="es" aria-pressed="false">ES</button>
-        <button data-i18n-lang="ko" aria-pressed="false">KO</button>
+        <button data-i18n-lang="en" aria-pressed="false"><span class="flag" aria-hidden="true">🇺🇸</span> EN</button>
+        <button data-i18n-lang="es" aria-pressed="false"><span class="flag" aria-hidden="true">🇪🇸</span> ES</button>
+        <button data-i18n-lang="ko" aria-pressed="false"><span class="flag" aria-hidden="true">🇰🇷</span> KO</button>
       </div>
     </div>
   </header>
@@ -92,6 +95,7 @@
         navAbout: "About", navProjects: "Projects", navBlog: "Blog",
         heroTitle: "Jorge Argüello",
         heroTagline: "Software developer & open source enthusiast building scalable solutions.",
+        brandName: "Jorge Argüello",
         statusPython: "Python", statusRust: "Rust", statusJs: "JavaScript", statusLinux: "Linux",
         galleryTitle: "Explore",
         galleryLead: "A quick look at this site. Choose a section to see more.",
@@ -108,6 +112,7 @@
         navAbout: "Sobre mí", navProjects: "Proyectos", navBlog: "Blog",
         heroTitle: "Jorge Argüello",
         heroTagline: "Desarrollador de software y entusiasta del código abierto construyendo soluciones escalables.",
+        brandName: "Jorge Argüello",
         statusPython: "Python", statusRust: "Rust", statusJs: "JavaScript", statusLinux: "Linux",
         galleryTitle: "Explora",
         galleryLead: "Un vistazo a este sitio. Elige una sección para ver más.",
@@ -124,6 +129,7 @@
         navAbout: "소개", navProjects: "프로젝트", navBlog: "블로그",
         heroTitle: "호르헤 아르게요",
         heroTagline: "확장 가능한 솔루션을 만드는 소프트웨어 개발자이자 오픈소스 애호가입니다.",
+        brandName: "호르헤 아르게요",
         statusPython: "파이썬", statusRust: "러스트", statusJs: "자바스크립트", statusLinux: "리눅스",
         galleryTitle: "살펴보기",
         galleryLead: "이 사이트를 간단히 둘러보세요. 자세히 보려면 섹션을 선택하세요.",
@@ -138,5 +144,16 @@
     };
   </script>
   <script src="js/i18n.js"></script>
+  <script>
+    // Liquid header: become solid once the hero is scrolled past
+    const header = document.getElementById('site-header');
+    const hero = document.querySelector('.hero');
+    const onScroll = () => {
+      const offset = hero ? hero.offsetHeight - 60 : 40;
+      header.classList.toggle('is-solid', window.scrollY > offset);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
 </body>
 </html>
