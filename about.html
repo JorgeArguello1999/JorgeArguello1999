@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Jorge Argüello</title>
+  <meta name="description" content="About Jorge Argüello.">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Jorge Argüello</a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="about.html" aria-current="page" data-i18n="navAbout">About</a></li>
+          <li><a href="projects.html" data-i18n="navProjects">Projects</a></li>
+          <li><a href="blog.html" data-i18n="navBlog">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button data-i18n-lang="en" aria-pressed="false">EN</button>
+        <button data-i18n-lang="es" aria-pressed="false">ES</button>
+        <button data-i18n-lang="ko" aria-pressed="false">KO</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <a class="back-link" href="index.html" data-i18n="backHome">← Back to home</a>
+
+    <section aria-labelledby="about-title" style="margin-top:24px;">
+      <h2 id="about-title" data-i18n="aboutTitle">About me</h2>
+      <p class="section-lead" data-i18n="aboutLead">Who I am and what I care about.</p>
+
+      <p data-i18n="p1">I'm a software developer passionate about creating scalable, maintainable software. I love open source and believe strongly in building tools that help people and communities.</p>
+      <p data-i18n="p2">I'm currently learning Python, Rust, and JavaScript, and I actively contribute to the PyCommunity-es community. When I'm not writing code, I enjoy learning about Linux, sharing my knowledge, and building useful projects.</p>
+      <p data-i18n="p3">Ask me about Linux, open source software, or scalable software design.</p>
+
+      <h3 id="skills-title" data-i18n="skillsTitle">Skills</h3>
+      <ul class="skills" aria-label="skills">
+        <li>Python</li>
+        <li>Rust</li>
+        <li>JavaScript</li>
+        <li>HTML &amp; CSS</li>
+        <li>Django</li>
+        <li>Flask</li>
+        <li>SQL</li>
+        <li>Docker</li>
+        <li>Linux</li>
+        <li>Git</li>
+      </ul>
+
+      <h3 id="contact-title" data-i18n="contactTitle">Get in touch</h3>
+      <p data-i18n="contactText">Have a question or a project in mind? Reach out anytime.</p>
+      <p><a href="mailto:contact@jorgearguello.net" data-i18n="contactEmail">contact@jorgearguello.net</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="https://twitter.com/al3x_argu" rel="noopener" data-i18n="twitter">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/jorgearguello1999" rel="noopener" data-i18n="linkedin">LinkedIn</a></li>
+      <li><a href="https://instagram.com/al3x_argu" rel="noopener" data-i18n="instagram">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@al3x_argu" rel="noopener" data-i18n="youtube">YouTube</a></li>
+    </ul>
+    <p data-i18n="footerText">© 1999 Jorge Argüello. Built with care and attention to accessibility.</p>
+  </footer>
+
+  <script>
+    window.TRANSLATIONS = {
+      en: {
+        skip: "Skip to main content",
+        navAbout: "About", navProjects: "Projects", navBlog: "Blog",
+        backHome: "← Back to home",
+        aboutTitle: "About me",
+        aboutLead: "Who I am and what I care about.",
+        p1: "I'm a software developer passionate about creating scalable, maintainable software. I love open source and believe strongly in building tools that help people and communities.",
+        p2: "I'm currently learning Python, Rust, and JavaScript, and I actively contribute to the PyCommunity-es community. When I'm not writing code, I enjoy learning about Linux, sharing my knowledge, and building useful projects.",
+        p3: "Ask me about Linux, open source software, or scalable software design.",
+        skillsTitle: "Skills",
+        contactTitle: "Get in touch",
+        contactText: "Have a question or a project in mind? Reach out anytime.",
+        contactEmail: "contact@jorgearguello.net",
+        twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
+        footerText: "© 1999 Jorge Argüello. Built with care and attention to accessibility.",
+        metaDescription: "About Jorge Argüello, software developer and open source enthusiast.",
+        languageName: "Language"
+      },
+      es: {
+        skip: "Saltar al contenido principal",
+        navAbout: "Sobre mí", navProjects: "Proyectos", navBlog: "Blog",
+        backHome: "← Volver al inicio",
+        aboutTitle: "Sobre mí",
+        aboutLead: "Quién soy y lo que me importa.",
+        p1: "Soy un desarrollador de software apasionado por crear soluciones escalables y mantenibles. Amo el código abierto y creo firmemente en construir herramientas que ayuden a las personas y a las comunidades.",
+        p2: "Actualmente aprendo Python, Rust y JavaScript, y contribuyo activamente a la comunidad PyCommunity-es. Cuando no escribo código, disfruto aprendiendo sobre Linux, compartiendo conocimiento y construyendo proyectos útiles.",
+        p3: "Pregúntame sobre Linux, software de código abierto o diseño de software escalable.",
+        skillsTitle: "Habilidades",
+        contactTitle: "Contacto",
+        contactText: "¿Tienes una pregunta o un proyecto en mente? Escríbeme cuando quieras.",
+        contactEmail: "contact@jorgearguello.net",
+        twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
+        footerText: "© 1999 Jorge Argüello. Hecho con cuidado y atención a la accesibilidad.",
+        metaDescription: "Sobre Jorge Argüello, desarrollador de software y entusiasta del código abierto.",
+        languageName: "Idioma"
+      },
+      ko: {
+        skip: "본문으로 건너뛰기",
+        navAbout: "소개", navProjects: "프로젝트", navBlog: "블로그",
+        backHome: "← 홈으로 돌아가기",
+        aboutTitle: "소개",
+        aboutLead: "제가 누구이고 무엇에 관심이 있는지 소개합니다.",
+        p1: "저는 확장 가능하고 유지보수가 쉬운 소프트웨어를 만드는 데 열정을 가진 소프트웨어 개발자입니다. 오픈소스를 좋아하며 사람들과 커뮤니티에 도움이 되는 도구를 만드는 것을 중요하게 생각합니다.",
+        p2: "현재 Python, Rust, JavaScript를 배우고 있으며 PyCommunity-es 커뮤니티에 적극적으로 기여하고 있습니다. 코드를 작성하지 않을 때는 리눅스에 대해 배우고, 지식을 나누고, 유용한 프로젝트를 만드는 것을 즐깁니다.",
+        p3: "리눅스, 오픈소스 소프트웨어, 확장 가능한 소프트웨어 설계에 대해 물어보세요.",
+        skillsTitle: "기술",
+        contactTitle: "연락처",
+        contactText: "질문이나 프로젝트가 있으면 언제든 연락주세요.",
+        contactEmail: "contact@jorgearguello.net",
+        twitter: "트위터", linkedin: "링크드인", instagram: "인스타그램", youtube: "유튜브",
+        footerText: "© 1999 Jorge Argüello. 접근성을 고려해 정성껏 만든 사이트입니다.",
+        metaDescription: "소프트웨어 개발자이자 오픈소스 애호가인 호르헤 아르게요에 대한 소개.",
+        languageName: "언어"
+      }
+    };
+  </script>
+  <script src="i18n.js"></script>
+</body>
+</html>

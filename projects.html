@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Jorge Argüello</title>
+  <meta name="description" content="Projects by Jorge Argüello.">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Jorge Argüello</a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="about.html" data-i18n="navAbout">About</a></li>
+          <li><a href="projects.html" aria-current="page" data-i18n="navProjects">Projects</a></li>
+          <li><a href="blog.html" data-i18n="navBlog">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button data-i18n-lang="en" aria-pressed="false">EN</button>
+        <button data-i18n-lang="es" aria-pressed="false">ES</button>
+        <button data-i18n-lang="ko" aria-pressed="false">KO</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <a class="back-link" href="index.html" data-i18n="backHome">← Back to home</a>
+
+    <section aria-labelledby="projects-title" style="margin-top:24px;">
+      <h2 id="projects-title" data-i18n="projectsTitle">Projects</h2>
+      <p class="section-lead" data-i18n="projectsLead">A selection of things I have built and contributed to.</p>
+
+      <article>
+        <h3 data-i18n="proj1">Professional Portfolio Website</h3>
+        <p class="meta" data-i18n="proj1Status">Status: Active</p>
+        <p data-i18n="proj1Text">A premium, accessible personal profile page built with nothing but semantic HTML and responsive CSS. It showcases a retro-modern design that stays fully keyboard-navigable.</p>
+        <ul>
+          <li data-i18n="proj1l1">Semantic and accessible markup</li>
+          <li data-i18n="proj1l2">Responsive design</li>
+          <li data-i18n="proj1l3">Built with pure CSS</li>
+        </ul>
+        <p><a href="https://www.jorgearguello.net" data-i18n="proj1link">View the live site</a></p>
+      </article>
+
+      <article>
+        <h3 data-i18n="proj2">PyCommunity</h3>
+        <p class="meta" data-i18n="proj2Status">Status: Active</p>
+        <p data-i18n="proj2Text">Active contribution to the Spanish-speaking Python community, helping expand knowledge and organize free coding events.</p>
+        <p><a href="mailto:contact@jorgearguello.net" data-i18n="proj2link">Ask me about contributing</a></p>
+      </article>
+
+      <article>
+        <h3 data-i18n="proj3">Concurrent Systems in Rust</h3>
+        <p class="meta" data-i18n="proj3Status">Status: In progress</p>
+        <p data-i18n="proj3Text">Building high-performance, concurrent services in Rust that take advantage of its memory-safety and concurrency guarantees without data races.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="https://twitter.com/al3x_argu" rel="noopener" data-i18n="twitter">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/jorgearguello1999" rel="noopener" data-i18n="linkedin">LinkedIn</a></li>
+      <li><a href="https://instagram.com/al3x_argu" rel="noopener" data-i18n="instagram">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@al3x_argu" rel="noopener" data-i18n="youtube">YouTube</a></li>
+    </ul>
+    <p data-i18n="footerText">© 1999 Jorge Argüello. Built with care and attention to accessibility.</p>
+  </footer>
+
+  <script>
+    window.TRANSLATIONS = {
+      en: {
+        skip: "Skip to main content",
+        navAbout: "About", navProjects: "Projects", navBlog: "Blog",
+        backHome: "← Back to home",
+        projectsTitle: "Projects",
+        projectsLead: "A selection of things I've built and contributed to.",
+        proj1: "Professional Portfolio Website",
+        proj1Status: "Status: Active",
+        proj1Text: "A premium, accessible personal profile page built with nothing but semantic HTML and plain CSS. It showcases a retro-modern design that stays fully keyboard-navigable.",
+        proj1l1: "Semantic and accessible markup",
+        proj1l2: "Responsive design",
+        proj1l3: "Built with pure CSS",
+        proj1link: "View the live site",
+        proj2: "PyCommunity",
+        proj2Status: "Status: Active",
+        proj2Text: "Active contribution to the Spanish-speaking Python community, helping expand knowledge and organize free coding events.",
+        proj2link: "Ask me about contributing",
+        proj3: "Concurrent Systems in Rust",
+        proj3Status: "Status: In progress",
+        proj3Text: "Building high-performance, concurrent services in Rust that take advantage of its memory-safety and concurrency guarantees without data races.",
+        twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
+        footerText: "© 1999 Jorge Argüello. Built with care and attention to accessibility.",
+        metaDescription: "Projects by Jorge Argüello, software developer and open source enthusiast.",
+        languageName: "Language"
+      },
+      es: {
+        skip: "Saltar al contenido principal",
+        navAbout: "Sobre mí", navProjects: "Proyectos", navBlog: "Blog",
+        backHome: "← Volver al inicio",
+        projectsTitle: "Proyectos",
+        projectsLead: "Una selección de lo que he construido y a lo que he contribuido.",
+        proj1: "Sitio Web de Portafolio Profesional",
+        proj1Status: "Estado: Activo",
+        proj1Text: "Una página de perfil personal, premium y accesible, construida solo con HTML semántico y CSS puro. Presenta un diseño retro-moderno totalmente navegable con teclado.",
+        proj1l1: "Marcado semántico y accesible",
+        proj1l2: "Diseño responsivo",
+        proj1l3: "Construido con CSS puro",
+        proj1link: "Ver el sitio en vivo",
+        proj2: "PyCommunity",
+        proj2Status: "Estado: Activo",
+        proj2Text: "Contribución activa a la comunidad hispana de Python, ayudando a expandir el conocimiento y a organizar eventos de código libre.",
+        proj2link: "Pregúntame cómo contribuir",
+        proj3: "Sistemas Concurrentes en Rust",
+        proj3Status: "Estado: En curso",
+        proj3Text: "Construyendo servicios concurrentes de alto rendimiento en Rust, aprovechando la seguridad de memoria y sus garantías de concurrencia sin data-races.",
+        twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
+        footerText: "© 1999 Jorge Argüello. Hecho con cuidado y atención a la accesibilidad.",
+        metaDescription: "Proyectos de Jorge Argüello, desarrollador de software y entusiasta del código abierto.",
+        languageName: "Idioma"
+      },
+      ko: {
+        skip: "본문으로 건너뛰기",
+        navAbout: "소개", navProjects: "프로젝트", navBlog: "블로그",
+        backHome: "← 홈으로 돌아가기",
+        projectsTitle: "프로젝트",
+        projectsLead: "제가 만들고 기여한 작업들을 소개합니다.",
+        proj1: "전문 포트폴리오 웹사이트",
+        proj1Status: "상태: 활성",
+        proj1Text: "시맨틱 HTML과 순수 CSS만으로 만든 프리미엄 접근성 개인 프로필 페이지입니다. 키보드로 완전히 탐색 가능한 레트로-모던 디자인을 보여줍니다.",
+        proj1l1: "시맨틱하고 접근성 좋은 마크업",
+        proj1l2: "반응형 디자인",
+        proj1l3: "순수 CSS로 제작",
+        proj1link: "실제 사이트 보기",
+        proj2: "PyCommunity",
+        proj2Status: "상태: 활성",
+        proj2Text: "스페인어 사용자를 위한 Python 커뮤니티에 적극 기여하며 지식을 확장하고 무료 코딩 행사를 조직하는 데 도움을 주고 있습니다.",
+        proj2link: "기여하는 방법 물어보기",
+        proj3: "Rust를 이용한 동시성 시스템",
+        proj3Status: "상태: 진행 중",
+        proj3Text: "Rust의 메모리 안전성과 동시성 보장을 활용해 data-race 없이 고성능 동시성 서비스를 만들고 있습니다.",
+        twitter: "트위터", linkedin: "링크드인", instagram: "인스타그램", youtube: "유튜브",
+        footerText: "© 1999 Jorge Argüello. 접근성을 고려해 정성껏 만든 사이트입니다.",
+        metaDescription: "소프트웨어 개발자이자 오픈소스 애호가인 호르헤 아르게요의 프로젝트입니다.",
+        languageName: "언어"
+      }
+    };
+  </script>
+  <script src="i18n.js"></script>
+</body>
+</html>

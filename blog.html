@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Jorge Argüello</title>
+  <meta name="description" content="Blog of Jorge Argüello.">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Jorge Argüello</a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="about.html" data-i18n="navAbout">About</a></li>
+          <li><a href="projects.html" data-i18n="navProjects">Projects</a></li>
+          <li><a href="blog.html" aria-current="page" data-i18n="navBlog">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language selection">
+        <button data-i18n-lang="en" aria-pressed="false">EN</button>
+        <button data-i18n-lang="es" aria-pressed="false">ES</button>
+        <button data-i18n-lang="ko" aria-pressed="false">KO</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <a class="back-link" href="index.html" data-i18n="backHome">← Back to home</a>
+
+    <section aria-labelledby="blog-title" style="margin-top:24px;">
+      <h2 id="blog-title" data-i18n="blogTitle">Blog</h2>
+      <p class="section-lead" data-i18n="blogLead">Notes about code, Linux, and the open source world.</p>
+
+      <article>
+        <h3 data-i18n="post1">Getting Started with Linux for Developers</h3>
+        <p class="meta" data-i18n="post1meta">2026 · Linux · Beginner</p>
+        <p data-i18n="post1text">A practical introduction to Linux for developers: essential commands, editors, package managers, and how to set up a comfortable workflow.</p>
+        <p><a href="https://www.jorgearguello.net/blog/" data-i18n="readFull">Read the full post →</a></p>
+      </article>
+
+      <article>
+        <h3 data-i18n="post2">Why I Choose Open Source</h3>
+        <p class="meta" data-i18n="post2meta">2026 · Open Source · Opinion</p>
+        <p data-i18n="post2text">Open source is more than free software: it's about community, transparency, and building tools that everyone can learn from and improve.</p>
+        <p><a href="https://www.jorgearguello.net/blog/" data-i18n="readFull2">Read the full post →</a></p>
+      </article>
+
+      <p class="section-lead" style="margin-top:28px;" data-i18n="more">More posts coming soon.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <ul>
+      <li><a href="https://twitter.com/al3x_argu" rel="noopener" data-i18n="twitter">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/jorgearguello1999" rel="noopener" data-i18n="linkedin">LinkedIn</a></li>
+      <li><a href="https://instagram.com/al3x_argu" rel="noopener" data-i18n="instagram">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@al3x_argu" rel="noopener" data-i18n="youtube">YouTube</a></li>
+    </ul>
+    <p data-i18n="footerText">© 1999 Jorge Argüello. Built with care and attention to accessibility.</p>
+  </footer>
+
+  <script>
+    window.TRANSLATIONS = {
+      en: {
+        skip: "Skip to main content",
+        navAbout: "About", navProjects: "Projects", navBlog: "Blog",
+        backHome: "← Back to home",
+        blogTitle: "Blog",
+        blogLead: "Notes about code, Linux, and the open source world.",
+        post1: "Getting Started with Linux for Developers",
+        post1meta: "2026 · Linux · Beginner",
+        post1text: "A practical introduction to Linux for developers: essential commands, editors, package managers, and how to set up a comfortable workflow.",
+        readFull: "Read the full post →",
+        post2: "Why I Choose Open Source",
+        post2meta: "2026 · Open Source · Opinion",
+        post2text: "Open source is more than free software: it's about community, transparency, and building tools that everyone can learn from and improve.",
+        readFull2: "Read the full post →",
+        more: "More posts coming soon.",
+        twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
+        footerText: "© 1999 Jorge Argüello. Built with care and attention to accessibility.",
+        metaDescription: "Blog of Jorge Argüello about code, Linux, and open source.",
+        languageName: "Language"
+      },
+      es: {
+        skip: "Saltar al contenido principal",
+        navAbout: "Sobre mí", navProjects: "Proyectos", navBlog: "Blog",
+        backHome: "← Volver al inicio",
+        blogTitle: "Blog",
+        blogLead: "Notas sobre código, Linux y el mundo del software libre.",
+        post1: "Empezando con Linux para Desarrolladores",
+        post1meta: "2026 · Linux · Principiante",
+        post1text: "Una introducción práctica a Linux para desarrolladores: comandos esenciales, editores, gestores de paquetes y cómo montar un flujo de trabajo cómodo.",
+        readFull: "Leer el artículo completo →",
+        post2: "Por qué elijo el Código Abierto",
+        post2meta: "2026 · Código Abierto · Opinión",
+        post2text: "El código abierto es más que software libre: se trata de comunidad, transparencia y de construir herramientas de las que todos puedan aprender y mejorar.",
+        readFull2: "Leer el artículo completo →",
+        more: "Pronto habrá más artículos.",
+        twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
+        footerText: "© 1999 Jorge Argüello. Hecho con cuidado y atención a la accesibilidad.",
+        metaDescription: "Blog de Jorge Argüello sobre código, Linux y código abierto.",
+        languageName: "Idioma"
+      },
+      ko: {
+        skip: "본문으로 건너뛰기",
+        navAbout: "소개", navProjects: "프로젝트", navBlog: "블로그",
+        backHome: "← 홈으로 돌아가기",
+        blogTitle: "블로그",
+        blogLead: "코드, 리눅스, 오픈소스 세계에 대한 기록입니다.",
+        post1: "개발자를 위한 리눅스 시작하기",
+        post1meta: "2026 · 리눅스 · 초급",
+        post1text: "개발자를 위한 리눅스 실용 입문: 필수 명령어, 에디터, 패키지 관리자, 그리고 편안한 작업 환경을 구성하는 방법을 소개합니다.",
+        readFull: "전체 글 읽기 →",
+        post2: "오픈소스를 선택하는 이유",
+        post2meta: "2026 · 오픈소스 · 의견",
+        post2text: "오픈소스는 단순한 무료 소프트웨어 이상입니다. 커뮤니티, 투명성, 그리고 모두가 배우고 개선할 수 있는 도구를 만드는 것입니다.",
+        readFull2: "전체 글 읽기 →",
+        more: "더 많은 글이 곧 올라옵니다.",
+        twitter: "트위터", linkedin: "링크드인", instagram: "인스타그램", youtube: "유튜브",
+        footerText: "© 1999 Jorge Argüello. 접근성을 고려해 정성껏 만든 사이트입니다.",
+        metaDescription: "코드, 리눅스, 오픈소스에 관한 호르헤 아르게요의 블로그입니다.",
+        languageName: "언어"
+      }
+    };
+  </script>
+  <script src="i18n.js"></script>
+</body>
+</html>
