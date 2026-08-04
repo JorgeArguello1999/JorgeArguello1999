@@ -5,29 +5,36 @@ A minimalist, accessible, dark-themed static website with EN / ES / KO translati
 ## Structure
 
 ```
-├── index.html          # Home / gallery page
-├── about/              # About me section
-│   └── index.html
-├── projects/           # Projects section
-│   └── index.html
-├── blog/               # Blog section
-│   └── index.html
-├── css/
-│   └── theme.css       # Dark theme and shared styles
-└── js/
-    └── i18n.js         # Translation engine (EN / ES / KO)
+├── docs/               # Website source (deployed to GitHub Pages)
+│   ├── index.html      # Home / gallery page
+│   ├── about/
+│   │   └── index.html  # About me section
+│   ├── projects/
+│   │   └── index.html  # Projects section
+│   ├── blog/
+│   │   └── index.html  # Blog section
+│   ├── css/
+│   │   └── theme.css   # Dark theme and shared styles
+│   └── js/
+│       └── i18n.js     # Translation engine (EN / ES / KO)
+└── README.md
 ```
 
 ## Run locally
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 --directory docs
 ```
 
 Then open http://localhost:8000
 
 ## Deploy to GitHub Pages
 
-Push to your repository and enable GitHub Pages from the branch you use for deployment.
+The site lives in `docs/`. To deploy:
 
-The site is fully static: no build step required.
+1. Push this branch to GitHub.
+2. In the repo **Settings → Pages**, set **Source** to:
+   - **Branch**: your deployment branch, and
+   - **Folder**: `/docs`
+
+No build step is required — everything is plain static files.
