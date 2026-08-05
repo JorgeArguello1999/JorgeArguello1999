@@ -48,4 +48,9 @@
     });
     setLang(getLang());
   });
+
+  window.I18N = {
+    getLang: getLang,
+    apply: setLang
+  };
 })();

@@ -37,32 +37,13 @@
 
     <section aria-labelledby="projects-title" style="margin-top:24px;">
       <h2 id="projects-title" data-i18n="projectsTitle">Projects</h2>
-      <p class="section-lead" data-i18n="projectsLead">A selection of things I have built and contributed to.</p>
+      <p class="section-lead" data-i18n="projectsLead">Public repositories pulled live from my GitHub, always up to date.</p>
 
-      <article>
-        <h3 data-i18n="proj1">Professional Portfolio Website</h3>
-        <p class="meta" data-i18n="proj1Status">Status: Active</p>
-        <p data-i18n="proj1Text">A premium, accessible personal profile page built with nothing but semantic HTML and responsive CSS. It showcases a retro-modern design that stays fully keyboard-navigable.</p>
-        <ul>
-          <li data-i18n="proj1l1">Semantic and accessible markup</li>
-          <li data-i18n="proj1l2">Responsive design</li>
-          <li data-i18n="proj1l3">Built with pure CSS</li>
-        </ul>
-        <p><a href="https://www.jorgearguello.net" data-i18n="proj1link">View the live site</a></p>
-      </article>
+      <p class="meta" id="repos-loading" data-i18n="reposLoading">Loading projects from GitHub…</p>
+      <p class="meta" id="repos-error" data-i18n="reposError" hidden>Couldn't load projects from GitHub right now. Please try again later.</p>
+      <p class="meta" id="repos-empty" data-i18n="reposEmpty" hidden>No public projects yet.</p>
 
-      <article>
-        <h3 data-i18n="proj2">PyCommunity</h3>
-        <p class="meta" data-i18n="proj2Status">Status: Active</p>
-        <p data-i18n="proj2Text">Active contribution to the Spanish-speaking Python community, helping expand knowledge and organize free coding events.</p>
-        <p><a href="mailto:contact@jorgearguello.net" data-i18n="proj2link">Ask me about contributing</a></p>
-      </article>
-
-      <article>
-        <h3 data-i18n="proj3">Concurrent Systems in Rust</h3>
-        <p class="meta" data-i18n="proj3Status">Status: In progress</p>
-        <p data-i18n="proj3Text">Building high-performance, concurrent services in Rust that take advantage of its memory-safety and concurrency guarantees without data races.</p>
-      </article>
+      <div id="repo-list"></div>
     </section>
   </main>
 
@@ -84,21 +65,12 @@
         brandName: "Jorge Argüello",
         backHome: "← Back to home",
         projectsTitle: "Projects",
-        projectsLead: "A selection of things I've built and contributed to.",
-        proj1: "Professional Portfolio Website",
-        proj1Status: "Status: Active",
-        proj1Text: "A premium, accessible personal profile page built with nothing but semantic HTML and plain CSS. It showcases a retro-modern design that stays fully keyboard-navigable.",
-        proj1l1: "Semantic and accessible markup",
-        proj1l2: "Responsive design",
-        proj1l3: "Built with pure CSS",
-        proj1link: "View the live site",
-        proj2: "PyCommunity",
-        proj2Status: "Status: Active",
-        proj2Text: "Active contribution to the Spanish-speaking Python community, helping expand knowledge and organize free coding events.",
-        proj2link: "Ask me about contributing",
-        proj3: "Concurrent Systems in Rust",
-        proj3Status: "Status: In progress",
-        proj3Text: "Building high-performance, concurrent services in Rust that take advantage of its memory-safety and concurrency guarantees without data races.",
+        projectsLead: "Public repositories pulled live from my GitHub, always up to date.",
+        reposLoading: "Loading projects from GitHub…",
+        reposError: "Couldn't load projects from GitHub right now. Please try again later.",
+        reposEmpty: "No public projects yet.",
+        updatedLabel: "Updated",
+        viewOnGithub: "View on GitHub →",
         twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
         footerText: "© 1999 Jorge Argüello. Built with care and attention to accessibility.",
         metaDescription: "Projects by Jorge Argüello, software developer and open source enthusiast.",
@@ -110,21 +82,12 @@
         brandName: "Jorge Argüello",
         backHome: "← Volver al inicio",
         projectsTitle: "Proyectos",
-        projectsLead: "Una selección de lo que he construido y a lo que he contribuido.",
-        proj1: "Sitio Web de Portafolio Profesional",
-        proj1Status: "Estado: Activo",
-        proj1Text: "Una página de perfil personal, premium y accesible, construida solo con HTML semántico y CSS puro. Presenta un diseño retro-moderno totalmente navegable con teclado.",
-        proj1l1: "Marcado semántico y accesible",
-        proj1l2: "Diseño responsivo",
-        proj1l3: "Construido con CSS puro",
-        proj1link: "Ver el sitio en vivo",
-        proj2: "PyCommunity",
-        proj2Status: "Estado: Activo",
-        proj2Text: "Contribución activa a la comunidad hispana de Python, ayudando a expandir el conocimiento y a organizar eventos de código libre.",
-        proj2link: "Pregúntame cómo contribuir",
-        proj3: "Sistemas Concurrentes en Rust",
-        proj3Status: "Estado: En curso",
-        proj3Text: "Construyendo servicios concurrentes de alto rendimiento en Rust, aprovechando la seguridad de memoria y sus garantías de concurrencia sin data-races.",
+        projectsLead: "Repositorios públicos extraídos en vivo desde mi GitHub, siempre actualizados.",
+        reposLoading: "Cargando proyectos desde GitHub…",
+        reposError: "No se pudieron cargar los proyectos desde GitHub ahora mismo. Inténtalo más tarde.",
+        reposEmpty: "Aún no hay proyectos públicos.",
+        updatedLabel: "Actualizado",
+        viewOnGithub: "Ver en GitHub →",
         twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
         footerText: "© 1999 Jorge Argüello. Hecho con cuidado y atención a la accesibilidad.",
         metaDescription: "Proyectos de Jorge Argüello, desarrollador de software y entusiasta del código abierto.",
@@ -136,21 +99,12 @@
         brandName: "호르헤 아르게요",
         backHome: "← 홈으로 돌아가기",
         projectsTitle: "프로젝트",
-        projectsLead: "제가 만들고 기여한 작업들을 소개합니다.",
-        proj1: "전문 포트폴리오 웹사이트",
-        proj1Status: "상태: 활성",
-        proj1Text: "시맨틱 HTML과 순수 CSS만으로 만든 프리미엄 접근성 개인 프로필 페이지입니다. 키보드로 완전히 탐색 가능한 레트로-모던 디자인을 보여줍니다.",
-        proj1l1: "시맨틱하고 접근성 좋은 마크업",
-        proj1l2: "반응형 디자인",
-        proj1l3: "순수 CSS로 제작",
-        proj1link: "실제 사이트 보기",
-        proj2: "PyCommunity",
-        proj2Status: "상태: 활성",
-        proj2Text: "스페인어 사용자를 위한 Python 커뮤니티에 적극 기여하며 지식을 확장하고 무료 코딩 행사를 조직하는 데 도움을 주고 있습니다.",
-        proj2link: "기여하는 방법 물어보기",
-        proj3: "Rust를 이용한 동시성 시스템",
-        proj3Status: "상태: 진행 중",
-        proj3Text: "Rust의 메모리 안전성과 동시성 보장을 활용해 data-race 없이 고성능 동시성 서비스를 만들고 있습니다.",
+        projectsLead: "제 GitHub에서 실시간으로 가져온 공개 저장소로, 항상 최신 상태를 유지합니다.",
+        reposLoading: "GitHub에서 프로젝트를 불러오는 중…",
+        reposError: "지금 GitHub에서 프로젝트를 불러올 수 없습니다. 나중에 다시 시도해 주세요.",
+        reposEmpty: "아직 공개 프로젝트가 없습니다.",
+        updatedLabel: "업데이트",
+        viewOnGithub: "GitHub에서 보기 →",
         twitter: "트위터", linkedin: "링크드인", instagram: "인스타그램", youtube: "유튜브",
         footerText: "© 1999 Jorge Argüello. 접근성을 고려해 정성껏 만든 사이트입니다.",
         metaDescription: "소프트웨어 개발자이자 오픈소스 애호가인 호르헤 아르게요의 프로젝트입니다.",
@@ -159,5 +113,102 @@
     };
   </script>
   <script src="../js/i18n.js"></script>
+  <script>
+    (function () {
+      var USER = 'JorgeArguello1999';
+      var list = document.getElementById('repo-list');
+      var loading = document.getElementById('repos-loading');
+      var errorEl = document.getElementById('repos-error');
+      var emptyEl = document.getElementById('repos-empty');
+
+      function el(tag, cls, text) {
+        var node = document.createElement(tag);
+        if (cls) node.className = cls;
+        if (text != null) node.textContent = text;
+        return node;
+      }
+
+      function label(key) {
+        var node = document.createElement('span');
+        node.setAttribute('data-i18n', key);
+        return node;
+      }
+
+      function formatDate(iso) {
+        var locale = (window.I18N && window.I18N.getLang()) || undefined;
+        try {
+          return new Date(iso).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' });
+        } catch (e) { return iso; }
+      }
+
+      function render(repos) {
+        loading.hidden = true;
+        if (!repos.length) {
+          emptyEl.hidden = false;
+          return;
+        }
+        repos.forEach(function (repo) {
+          var article = document.createElement('article');
+
+          var h3 = el('h3');
+          var link = el('a', null, repo.name);
+          link.href = repo.html_url;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          h3.appendChild(link);
+          article.appendChild(h3);
+
+          var meta = el('p', 'repo-meta');
+          if (repo.language) meta.appendChild(el('span', 'repo-lang', repo.language));
+          meta.appendChild(el('span', 'repo-stat', '★ ' + repo.stargazers_count));
+          meta.appendChild(el('span', 'repo-stat', '⑂ ' + repo.forks_count));
+          var updated = el('span', 'repo-stat');
+          updated.appendChild(label('updatedLabel'));
+          updated.appendChild(document.createTextNode(' ' + formatDate(repo.updated_at)));
+          meta.appendChild(updated);
+          article.appendChild(meta);
+
+          if (repo.description) article.appendChild(el('p', null, repo.description));
+
+          if (repo.topics && repo.topics.length) {
+            var topics = el('ul', 'skills');
+            topics.setAttribute('aria-label', 'topics');
+            repo.topics.slice(0, 6).forEach(function (topic) {
+              topics.appendChild(el('li', null, topic));
+            });
+            article.appendChild(topics);
+          }
+
+          var view = el('p');
+          var viewLink = el('a', null, '');
+          viewLink.href = repo.html_url;
+          viewLink.target = '_blank';
+          viewLink.rel = 'noopener';
+          viewLink.setAttribute('data-i18n', 'viewOnGithub');
+          view.appendChild(viewLink);
+          article.appendChild(view);
+
+          list.appendChild(article);
+        });
+      }
+
+      fetch('https://api.github.com/users/' + USER + '/repos?per_page=100&sort=updated')
+        .then(function (res) {
+          if (!res.ok) throw new Error('GitHub API error ' + res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          if (Array.isArray(data)) render(data);
+          else throw new Error('Unexpected response');
+        })
+        .catch(function () {
+          loading.hidden = true;
+          errorEl.hidden = false;
+        })
+        .then(function () {
+          if (window.I18N) window.I18N.apply(window.I18N.getLang());
+        });
+    })();
+  </script>
 </body>
 </html>
