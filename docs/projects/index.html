@@ -43,7 +43,7 @@
       <p class="meta" id="repos-error" data-i18n="reposError" hidden>Couldn't load projects from GitHub right now. Please try again later.</p>
       <p class="meta" id="repos-empty" data-i18n="reposEmpty" hidden>No public projects yet.</p>
 
-      <div id="repo-list"></div>
+      <div id="repo-list" class="projects-grid"></div>
     </section>
   </main>
 
@@ -71,6 +71,7 @@
         reposEmpty: "No public projects yet.",
         updatedLabel: "Updated",
         viewOnGithub: "View on GitHub →",
+        visitSite: "Visit site →",
         twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
         footerText: "© 1999 Jorge Argüello. Built with care and attention to accessibility.",
         metaDescription: "Projects by Jorge Argüello, software developer and open source enthusiast.",
@@ -88,6 +89,7 @@
         reposEmpty: "Aún no hay proyectos públicos.",
         updatedLabel: "Actualizado",
         viewOnGithub: "Ver en GitHub →",
+        visitSite: "Visitar sitio →",
         twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
         footerText: "© 1999 Jorge Argüello. Hecho con cuidado y atención a la accesibilidad.",
         metaDescription: "Proyectos de Jorge Argüello, desarrollador de software y entusiasta del código abierto.",
@@ -105,6 +107,7 @@
         reposEmpty: "아직 공개 프로젝트가 없습니다.",
         updatedLabel: "업데이트",
         viewOnGithub: "GitHub에서 보기 →",
+        visitSite: "사이트 방문 →",
         twitter: "트위터", linkedin: "링크드인", instagram: "인스타그램", youtube: "유튜브",
         footerText: "© 1999 Jorge Argüello. 접근성을 고려해 정성껏 만든 사이트입니다.",
         metaDescription: "소프트웨어 개발자이자 오픈소스 애호가인 호르헤 아르게요의 프로젝트입니다.",
@@ -148,7 +151,16 @@
           return;
         }
         repos.forEach(function (repo) {
-          var article = document.createElement('article');
+          var card = document.createElement('article');
+          card.className = 'card repo-card';
+
+          var cover = document.createElement('img');
+          cover.className = 'repo-cover';
+          cover.src = 'https://opengraph.githubassets.com/1/JorgeArguello1999/' + repo.name;
+          cover.alt = repo.name;
+          cover.loading = 'lazy';
+          cover.addEventListener('error', function () { cover.hidden = true; });
+          card.appendChild(cover);
 
           var h3 = el('h3');
           var link = el('a', null, repo.name);
@@ -156,7 +168,7 @@
           link.target = '_blank';
           link.rel = 'noopener';
           h3.appendChild(link);
-          article.appendChild(h3);
+          card.appendChild(h3);
 
           var meta = el('p', 'repo-meta');
           if (repo.language) meta.appendChild(el('span', 'repo-lang', repo.language));
@@ -166,9 +178,9 @@
           updated.appendChild(label('updatedLabel'));
           updated.appendChild(document.createTextNode(' ' + formatDate(repo.updated_at)));
           meta.appendChild(updated);
-          article.appendChild(meta);
+          card.appendChild(meta);
 
-          if (repo.description) article.appendChild(el('p', null, repo.description));
+          if (repo.description) card.appendChild(el('p', 'repo-desc', repo.description));
 
           if (repo.topics && repo.topics.length) {
             var topics = el('ul', 'skills');
@@ -176,19 +188,29 @@
             repo.topics.slice(0, 6).forEach(function (topic) {
               topics.appendChild(el('li', null, topic));
             });
-            article.appendChild(topics);
+            card.appendChild(topics);
           }
 
-          var view = el('p');
-          var viewLink = el('a', null, '');
-          viewLink.href = repo.html_url;
-          viewLink.target = '_blank';
-          viewLink.rel = 'noopener';
-          viewLink.setAttribute('data-i18n', 'viewOnGithub');
-          view.appendChild(viewLink);
-          article.appendChild(view);
+          var links = el('div', 'repo-links');
 
-          list.appendChild(article);
+          var github = el('a', 'card-link', '');
+          github.href = repo.html_url;
+          github.target = '_blank';
+          github.rel = 'noopener';
+          github.setAttribute('data-i18n', 'viewOnGithub');
+          links.appendChild(github);
+
+          if (repo.homepage) {
+            var site = el('a', 'card-link', '');
+            site.href = repo.homepage;
+            site.target = '_blank';
+            site.rel = 'noopener';
+            site.setAttribute('data-i18n', 'visitSite');
+            links.appendChild(site);
+          }
+
+          card.appendChild(links);
+          list.appendChild(card);
         });
       }
 

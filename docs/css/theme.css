@@ -159,6 +159,20 @@ article .meta { color: var(--text-muted); font-size: 0.95rem; margin: 0 0 8px; }
 article p { margin: 6px 0; }
 
 /* GitHub repo list */
+.projects-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.repo-card { padding: 18px; }
+.repo-card .repo-cover {
+  width: 100%;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin: 0 0 12px;
+}
+.repo-card .repo-meta { flex-grow: 0; }
+.repo-links { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 4px; }
+.repo-links .card-link { font-weight: 600; color: var(--accent); }
+.repo-links .card-link:hover { color: var(--focus); }
 .repo-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--text-muted); font-size: 0.9rem; }
 .repo-lang { background: var(--surface); border: 1px solid var(--border); padding: 2px 10px; border-radius: 999px; font-size: 0.85rem; }
 .repo-stat { display: inline-flex; align-items: center; gap: 4px; }
