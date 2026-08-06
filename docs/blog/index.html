@@ -56,7 +56,6 @@
       <p class="meta" id="posts-error" data-i18n="postsError" hidden>Couldn't load posts right now. Please try again later.</p>
       <p class="meta" id="posts-empty" data-i18n="postsEmpty" hidden>No posts yet.</p>
       <div id="post-list" class="post-grid"></div>
-      <article id="post-view" class="post-view" hidden></article>
     </section>
   </main>
 
@@ -153,7 +152,6 @@
     };
   </script>
   <script src="../js/i18n.js"></script>
-  <script src="../js/marked.min.js"></script>
   <script>
     (function () {
       var YT_CHANNEL = 'UCVgabwEiFAunNH6c7abqoCQ';
@@ -163,10 +161,10 @@
       var posts = [];
       var FALLBACK_POSTS = [
         {
-          slug: '2026-08-04-welcome-to-my-blog',
+          slug: '2026-09-04-welcome-to-my',
           title: 'Welcome to my blog',
-          date: new Date(2026, 7, 4),
-          md: '# Welcome to my blog\n\nThis is my personal blog. Posts are written in **Markdown** and stored right in the repository under `docs/blog/posts/`, so they show up here automatically whenever I push a new file.\n\n## What to expect\n\n- Notes about code and software\n- Linux tips and tricks\n- Adventures in the open source world\n\n## How it works\n\nThis page reads the `blog/posts` directory from the GitHub repository, renders each `.md` file, and shows them newest first. No build step needed.\n\nThanks for reading!\n'
+          date: new Date(2026, 8, 4),
+          md: '# Welcome to my blog\n\nis this a new blog?\n\nThis is my personal blog. Posts are written in **Markdown** and stored right in the repository under `docs/blog/posts/`, so they show up here automatically whenever I push a new file.\n\n## What to expect\n\n- Notes about code and software\n- Linux tips and tricks\n- Adventures in the open source world\n\n## How it works\n\nThis page reads the `blog/posts` directory from the GitHub repository, renders each `.md` file, and shows them newest first. No build step needed.\n\n> Tip: create a file like `2026-08-05-my-title.md` in the `posts` folder and it appears here.\n\n```bash\ngit add docs/blog/posts/\ngit commit -m "new post"\ngit push\n```\n\nThanks for reading!\n'
         }
       ];
 
@@ -297,9 +295,7 @@
 
       /* ---------- Markdown posts ---------- */
       var postList = document.getElementById('post-list');
-      var postView = document.getElementById('post-view');
       var postsEmpty = document.getElementById('posts-empty');
-      var postsError = document.getElementById('posts-error');
 
       function parseDate(name) {
         var m = name.match(/^(\d{4})-(\d{2})-(\d{2})/);
@@ -322,60 +318,6 @@
         return text.length > 180 ? text.slice(0, 180) + '…' : text;
       }
 
-      function escapeHtml(s) {
-        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      }
-
-      function inlineMd(s) {
-        return escapeHtml(s)
-          .replace(/`([^`]+)`/g, '<code>$1</code>')
-          .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-          .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
-      }
-
-      function miniMarkdown(md) {
-        var out = [];
-        var lines = md.replace(/\r\n/g, '\n').split('\n');
-        var inCode = false, codeBuf = [], para = [];
-        function flushPara() {
-          if (para.length) { out.push('<p>' + para.join('<br>') + '</p>'); para = []; }
-        }
-        for (var i = 0; i < lines.length; i++) {
-          var line = lines[i];
-          if (/^```/.test(line)) {
-            flushPara();
-            if (inCode) { out.push('<pre><code>' + escapeHtml(codeBuf.join('\n')) + '</code></pre>'); codeBuf = []; }
-            inCode = !inCode;
-            continue;
-          }
-          if (inCode) { codeBuf.push(line); continue; }
-          if (/^###\s+/.test(line)) { flushPara(); out.push('<h3>' + inlineMd(line.replace(/^###\s+/, '')) + '</h3>'); }
-          else if (/^##\s+/.test(line)) { flushPara(); out.push('<h2>' + inlineMd(line.replace(/^##\s+/, '')) + '</h2>'); }
-          else if (/^#\s+/.test(line)) { flushPara(); out.push('<h1>' + inlineMd(line.replace(/^#\s+/, '')) + '</h1>'); }
-          else if (/^>\s?/.test(line)) { flushPara(); out.push('<blockquote>' + inlineMd(line.replace(/^>\s?/, '')) + '</blockquote>'); }
-          else if (/^[-*]\s+/.test(line)) { flushPara(); out.push('<li>' + inlineMd(line.replace(/^[-*]\s+/, '')) + '</li>'); }
-          else if (/^\d+\.\s+/.test(line)) { flushPara(); out.push('<li>' + inlineMd(line.replace(/^\d+\.\s+/, '')) + '</li>'); }
-          else if (/^\s*$/.test(line)) { flushPara(); }
-          else { para.push(inlineMd(line)); }
-        }
-        flushPara();
-        if (inCode) out.push('<pre><code>' + escapeHtml(codeBuf.join('\n')) + '</code></pre>');
-        return out.join('\n');
-      }
-
-      function renderMarkdown(md) {
-        if (window.marked && typeof window.marked.parse === 'function') {
-          try { return window.marked.parse(md); }
-          catch (e) {}
-        }
-        if (window.marked && typeof window.marked === 'function') {
-          try { return window.marked(md); }
-          catch (e) {}
-        }
-        return miniMarkdown(md);
-      }
-
       function renderPostList() {
         postList.innerHTML = '';
         posts.sort(function (a, b) {
@@ -390,8 +332,7 @@
 
           var h3 = el('h3');
           var titleLink = el('a', null, post.title);
-          titleLink.href = '#post/' + encodeURIComponent(post.slug);
-          titleLink.addEventListener('click', function (e) { e.preventDefault(); showPost(post.slug); });
+          titleLink.href = 'post.html?slug=' + encodeURIComponent(post.slug);
           h3.appendChild(titleLink);
           card.appendChild(h3);
 
@@ -407,76 +348,21 @@
 
           var linkP = el('p', 'post-link');
           var readLink = el('a', null, '');
-          readLink.href = '#post/' + encodeURIComponent(post.slug);
+          readLink.href = 'post.html?slug=' + encodeURIComponent(post.slug);
           readLink.setAttribute('data-i18n', 'readPost');
-          readLink.addEventListener('click', function (e) { e.preventDefault(); showPost(post.slug); });
           linkP.appendChild(readLink);
           card.appendChild(linkP);
 
           postList.appendChild(card);
         });
         if (!posts.length) postsEmpty.hidden = false;
-      }
-
-      function showPost(slug) {
-        var post = null;
-        for (var i = 0; i < posts.length; i++) {
-          if (posts[i].slug === slug) { post = posts[i]; break; }
-        }
-        if (!post) return;
-        location.hash = '#post/' + encodeURIComponent(post.slug);
-        postView.innerHTML = '';
-
-        var back = el('p', 'back-link');
-        var backA = el('a', null, '');
-        backA.href = '#posts';
-        backA.setAttribute('data-i18n', 'backToPosts');
-        backA.addEventListener('click', function (e) { e.preventDefault(); showList(); });
-        back.appendChild(backA);
-        postView.appendChild(back);
-
-        postView.appendChild(el('h2', null, post.title));
-        if (post.date) {
-          var meta = el('p', 'meta');
-          meta.appendChild(label('publishedLabel'));
-          meta.appendChild(document.createTextNode(' ' + formatDate(post.date)));
-          postView.appendChild(meta);
-        }
-
-        var body = document.createElement('div');
-        body.className = 'post-body';
-        body.innerHTML = renderMarkdown(post.md);
-        postView.appendChild(body);
-
-        postList.hidden = true;
-        postView.hidden = false;
-        window.scrollTo(0, 0);
+        document.getElementById('posts-loading').hidden = true;
         if (window.I18N) window.I18N.apply(window.I18N.getLang());
-      }
-
-      function showList() {
-        location.hash = '#posts';
-        postView.hidden = true;
-        postList.hidden = false;
-        if (window.I18N) window.I18N.apply(window.I18N.getLang());
-      }
-
-      window.addEventListener('hashchange', function () {
-        var m = location.hash.match(/^#post\/(.+)$/);
-        if (m) showPost(decodeURIComponent(m[1]));
-        else if (!location.hash || location.hash === '#posts') showList();
-      });
-
-      function applyHash() {
-        var m = location.hash.match(/^#post\/(.+)$/);
-        if (m) showPost(decodeURIComponent(m[1]));
-        else showList();
       }
 
       /* ---------- Init: show content instantly, then upgrade with live repo data ---------- */
       posts = FALLBACK_POSTS.slice();
       renderPostList();
-      applyHash();
 
       function loadLivePosts() {
         var url = 'https://api.github.com/repos/' + REPO + '/contents/docs/blog/posts?ref=' + BRANCH;
@@ -517,9 +403,7 @@
             }));
           })
           .then(function () {
-            if (!postView.hidden) return;
             renderPostList();
-            applyHash();
           })
           .catch(function () {});
       }
