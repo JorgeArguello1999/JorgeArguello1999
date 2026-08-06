@@ -38,24 +38,25 @@
     <section aria-labelledby="blog-title" style="margin-top:24px;">
       <h2 id="blog-title" data-i18n="blogTitle">Blog</h2>
       <p class="section-lead" data-i18n="blogLead">Notes about code, Linux, and the open source world.</p>
+    </section>
 
-      <div class="post-grid">
-        <article class="card post-card">
-          <h3 data-i18n="post1">Getting Started with Linux for Developers</h3>
-          <p class="meta" data-i18n="post1meta">2026 · Linux · Beginner</p>
-          <p data-i18n="post1text">A practical introduction to Linux for developers: essential commands, editors, package managers, and how to set up a comfortable workflow.</p>
-          <p class="post-link"><a href="https://www.jorgearguello.net/blog/" data-i18n="readFull">Read the full post →</a></p>
-        </article>
+    <section aria-labelledby="videos-title">
+      <h2 id="videos-title" data-i18n="videosTitle">Videos</h2>
+      <p class="section-lead" data-i18n="videosLead">My latest videos on YouTube.</p>
+      <p class="meta" id="yt-loading" data-i18n="ytLoading">Loading videos…</p>
+      <p class="meta" id="yt-error" data-i18n="ytError" hidden>Couldn't load videos right now. Please try again later.</p>
+      <p class="meta" id="yt-empty" data-i18n="ytEmpty" hidden>No videos yet. Coming soon!</p>
+      <div id="video-grid" class="video-grid"></div>
+    </section>
 
-        <article class="card post-card">
-          <h3 data-i18n="post2">Why I Choose Open Source</h3>
-          <p class="meta" data-i18n="post2meta">2026 · Open Source · Opinion</p>
-          <p data-i18n="post2text">Open source is more than free software: it's about community, transparency, and building tools that everyone can learn from and improve.</p>
-          <p class="post-link"><a href="https://www.jorgearguello.net/blog/" data-i18n="readFull2">Read the full post →</a></p>
-        </article>
-      </div>
-
-      <p class="section-lead" style="margin-top:28px;" data-i18n="more">More posts coming soon.</p>
+    <section aria-labelledby="posts-title">
+      <h2 id="posts-title" data-i18n="postsTitle">Posts</h2>
+      <p class="section-lead" data-i18n="postsLead">Notes from my blog — written in markdown, straight from the repo.</p>
+      <p class="meta" id="posts-loading" data-i18n="postsLoading" hidden>Loading posts…</p>
+      <p class="meta" id="posts-error" data-i18n="postsError" hidden>Couldn't load posts right now. Please try again later.</p>
+      <p class="meta" id="posts-empty" data-i18n="postsEmpty" hidden>No posts yet.</p>
+      <div id="post-list" class="post-grid"></div>
+      <article id="post-view" class="post-view" hidden></article>
     </section>
   </main>
 
@@ -78,15 +79,20 @@
         backHome: "← Back to home",
         blogTitle: "Blog",
         blogLead: "Notes about code, Linux, and the open source world.",
-        post1: "Getting Started with Linux for Developers",
-        post1meta: "2026 · Linux · Beginner",
-        post1text: "A practical introduction to Linux for developers: essential commands, editors, package managers, and how to set up a comfortable workflow.",
-        readFull: "Read the full post →",
-        post2: "Why I Choose Open Source",
-        post2meta: "2026 · Open Source · Opinion",
-        post2text: "Open source is more than free software: it's about community, transparency, and building tools that everyone can learn from and improve.",
-        readFull2: "Read the full post →",
-        more: "More posts coming soon.",
+        videosTitle: "Videos",
+        videosLead: "My latest videos on YouTube.",
+        ytLoading: "Loading videos…",
+        ytError: "Couldn't load videos right now. Please try again later.",
+        ytEmpty: "No videos yet. Coming soon!",
+        watchOnYouTube: "Watch on YouTube →",
+        publishedLabel: "Published",
+        postsTitle: "Posts",
+        postsLead: "Notes from my blog — written in markdown, straight from the repo.",
+        postsLoading: "Loading posts…",
+        postsError: "Couldn't load posts right now. Please try again later.",
+        postsEmpty: "No posts yet.",
+        readPost: "Read post →",
+        backToPosts: "← Back to all posts",
         twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
         footerText: "© 1999 Jorge Argüello. Built with care and attention to accessibility.",
         metaDescription: "Blog of Jorge Argüello about code, Linux, and open source.",
@@ -99,15 +105,20 @@
         backHome: "← Volver al inicio",
         blogTitle: "Blog",
         blogLead: "Notas sobre código, Linux y el mundo del software libre.",
-        post1: "Empezando con Linux para Desarrolladores",
-        post1meta: "2026 · Linux · Principiante",
-        post1text: "Una introducción práctica a Linux para desarrolladores: comandos esenciales, editores, gestores de paquetes y cómo montar un flujo de trabajo cómodo.",
-        readFull: "Leer el artículo completo →",
-        post2: "Por qué elijo el Código Abierto",
-        post2meta: "2026 · Código Abierto · Opinión",
-        post2text: "El código abierto es más que software libre: se trata de comunidad, transparencia y de construir herramientas de las que todos puedan aprender y mejorar.",
-        readFull2: "Leer el artículo completo →",
-        more: "Pronto habrá más artículos.",
+        videosTitle: "Videos",
+        videosLead: "Mis últimos videos en YouTube.",
+        ytLoading: "Cargando videos…",
+        ytError: "No se pudieron cargar los videos ahora mismo. Inténtalo más tarde.",
+        ytEmpty: "Aún no hay videos. ¡Muy pronto!",
+        watchOnYouTube: "Ver en YouTube →",
+        publishedLabel: "Publicado",
+        postsTitle: "Artículos",
+        postsLead: "Notas de mi blog, escritas en markdown, directamente desde el repositorio.",
+        postsLoading: "Cargando artículos…",
+        postsError: "No se pudieron cargar los artículos ahora mismo. Inténtalo más tarde.",
+        postsEmpty: "Aún no hay artículos.",
+        readPost: "Leer artículo →",
+        backToPosts: "← Volver a todos los artículos",
         twitter: "Twitter", linkedin: "LinkedIn", instagram: "Instagram", youtube: "YouTube",
         footerText: "© 1999 Jorge Argüello. Hecho con cuidado y atención a la accesibilidad.",
         metaDescription: "Blog de Jorge Argüello sobre código, Linux y código abierto.",
@@ -120,15 +131,20 @@
         backHome: "← 홈으로 돌아가기",
         blogTitle: "블로그",
         blogLead: "코드, 리눅스, 오픈소스 세계에 대한 기록입니다.",
-        post1: "개발자를 위한 리눅스 시작하기",
-        post1meta: "2026 · 리눅스 · 초급",
-        post1text: "개발자를 위한 리눅스 실용 입문: 필수 명령어, 에디터, 패키지 관리자, 그리고 편안한 작업 환경을 구성하는 방법을 소개합니다.",
-        readFull: "전체 글 읽기 →",
-        post2: "오픈소스를 선택하는 이유",
-        post2meta: "2026 · 오픈소스 · 의견",
-        post2text: "오픈소스는 단순한 무료 소프트웨어 이상입니다. 커뮤니티, 투명성, 그리고 모두가 배우고 개선할 수 있는 도구를 만드는 것입니다.",
-        readFull2: "전체 글 읽기 →",
-        more: "더 많은 글이 곧 올라옵니다.",
+        videosTitle: "비디오",
+        videosLead: "YouTube의 최신 비디오입니다.",
+        ytLoading: "비디오를 불러오는 중…",
+        ytError: "지금 비디오를 불러올 수 없습니다. 나중에 다시 시도해 주세요.",
+        ytEmpty: "아직 비디오가 없습니다. 곧 업로드됩니다!",
+        watchOnYouTube: "YouTube에서 보기 →",
+        publishedLabel: "게시일",
+        postsTitle: "글",
+        postsLead: "저장소에서 직접 가져온 마크다운으로 작성된 블로그 글입니다.",
+        postsLoading: "글을 불러오는 중…",
+        postsError: "지금 글을 불러올 수 없습니다. 나중에 다시 시도해 주세요.",
+        postsEmpty: "아직 글이 없습니다.",
+        readPost: "글 읽기 →",
+        backToPosts: "← 전체 글 목록으로",
         twitter: "트위터", linkedin: "링크드인", instagram: "인스타그램", youtube: "유튜브",
         footerText: "© 1999 Jorge Argüello. 접근성을 고려해 정성껏 만든 사이트입니다.",
         metaDescription: "코드, 리눅스, 오픈소스에 관한 호르헤 아르게요의 블로그입니다.",
@@ -137,5 +153,380 @@
     };
   </script>
   <script src="../js/i18n.js"></script>
+  <script src="../js/marked.min.js"></script>
+  <script>
+    (function () {
+      var YT_CHANNEL = 'UCVgabwEiFAunNH6c7abqoCQ';
+      var REPO = 'JorgeArguello1999/JorgeArguello1999';
+      var BRANCH = 'pre-production';
+
+      var posts = [];
+      var FALLBACK_POSTS = [
+        {
+          slug: '2026-08-04-welcome-to-my-blog',
+          title: 'Welcome to my blog',
+          date: new Date(2026, 7, 4),
+          md: '# Welcome to my blog\n\nThis is my personal blog. Posts are written in **Markdown** and stored right in the repository under `docs/blog/posts/`, so they show up here automatically whenever I push a new file.\n\n## What to expect\n\n- Notes about code and software\n- Linux tips and tricks\n- Adventures in the open source world\n\n## How it works\n\nThis page reads the `blog/posts` directory from the GitHub repository, renders each `.md` file, and shows them newest first. No build step needed.\n\nThanks for reading!\n'
+        }
+      ];
+
+      function el(tag, cls, text) {
+        var node = document.createElement(tag);
+        if (cls) node.className = cls;
+        if (text != null) node.textContent = text;
+        return node;
+      }
+
+      function label(key) {
+        var node = document.createElement('span');
+        node.setAttribute('data-i18n', key);
+        return node;
+      }
+
+      function formatDate(d) {
+        var locale = (window.I18N && window.I18N.getLang()) || undefined;
+        try {
+          return d.toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' });
+        } catch (e) { return String(d); }
+      }
+
+      function fetchWithTimeout(url, ms) {
+        var ctrl = null;
+        if (typeof AbortController === 'function') ctrl = new AbortController();
+        var opts = ctrl ? { signal: ctrl.signal } : {};
+        var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, ms);
+        return fetch(url, opts).then(
+          function (res) { clearTimeout(timer); return res; },
+          function (err) { clearTimeout(timer); throw err; }
+        );
+      }
+
+      /* ---------- YouTube ---------- */
+      var videoGrid = document.getElementById('video-grid');
+      var ytLoading = document.getElementById('yt-loading');
+      var ytError = document.getElementById('yt-error');
+      var ytEmpty = document.getElementById('yt-empty');
+
+      function renderVideos(entries) {
+        entries.forEach(function (entry) {
+          var title = (entry.getElementsByTagName('title')[0] || {}).textContent || '';
+          var link = (entry.getElementsByTagName('link')[0] || {}).getAttribute ? entry.getElementsByTagName('link')[0].getAttribute('href') : '';
+          var published = (entry.getElementsByTagName('published')[0] || {}).textContent || '';
+          var idMatch = link.match(/[?&]v=([\w-]+)/);
+          var videoId = idMatch ? idMatch[1] : '';
+          if (!videoId || !link) return;
+
+          var card = document.createElement('article');
+          card.className = 'card video-card';
+
+          var thumbLink = el('a', 'video-thumb');
+          thumbLink.href = link;
+          thumbLink.target = '_blank';
+          thumbLink.rel = 'noopener';
+          var img = el('img');
+          img.src = 'https://i.ytimg.com/vi/' + videoId + '/mqdefault.jpg';
+          img.alt = title;
+          img.loading = 'lazy';
+          thumbLink.appendChild(img);
+          card.appendChild(thumbLink);
+
+          var h3 = el('h3');
+          var titleLink = el('a', null, title);
+          titleLink.href = link;
+          titleLink.target = '_blank';
+          titleLink.rel = 'noopener';
+          h3.appendChild(titleLink);
+          card.appendChild(h3);
+
+          if (published) {
+            var meta = el('p', 'meta');
+            meta.appendChild(label('publishedLabel'));
+            meta.appendChild(document.createTextNode(' ' + formatDate(new Date(published))));
+            card.appendChild(meta);
+          }
+
+          var linkP = el('p', 'post-link');
+          var watch = el('a', null, '');
+          watch.href = link;
+          watch.target = '_blank';
+          watch.rel = 'noopener';
+          watch.setAttribute('data-i18n', 'watchOnYouTube');
+          linkP.appendChild(watch);
+          card.appendChild(linkP);
+
+          videoGrid.appendChild(card);
+        });
+      }
+
+      function loadYouTube() {
+        var feed = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + YT_CHANNEL;
+        var proxies = [
+          'https://api.allorigins.win/raw?url=' + encodeURIComponent(feed),
+          'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(feed)
+        ];
+        var done = false;
+        function finish(fn) { if (!done) { done = true; fn(); } }
+        function tryFetch(i) {
+          if (i >= proxies.length) {
+            finish(function () { ytLoading.hidden = true; ytError.hidden = false; });
+            return;
+          }
+          fetchWithTimeout(proxies[i], 8000)
+            .then(function (res) {
+              if (res.status === 404) {
+                finish(function () { ytLoading.hidden = true; ytEmpty.hidden = false; });
+                return null;
+              }
+              if (!res.ok) throw new Error('HTTP ' + res.status);
+              return res.text();
+            })
+            .then(function (xmlText) {
+              if (xmlText === null || xmlText === undefined) return;
+              var doc = new DOMParser().parseFromString(xmlText, 'text/xml');
+              var entries = Array.prototype.slice.call(doc.querySelectorAll('entry'));
+              finish(function () {
+                ytLoading.hidden = true;
+                if (!entries.length) { ytEmpty.hidden = false; return; }
+                renderVideos(entries);
+              });
+            })
+            .catch(function () { tryFetch(i + 1); });
+        }
+        tryFetch(0);
+      }
+
+      /* ---------- Markdown posts ---------- */
+      var postList = document.getElementById('post-list');
+      var postView = document.getElementById('post-view');
+      var postsEmpty = document.getElementById('posts-empty');
+      var postsError = document.getElementById('posts-error');
+
+      function parseDate(name) {
+        var m = name.match(/^(\d{4})-(\d{2})-(\d{2})/);
+        if (!m) return null;
+        return new Date(+m[1], +m[2] - 1, +m[3]);
+      }
+
+      function titleFromMd(md) {
+        var m = md.match(/^#\s+(.+)$/m);
+        return m ? m[1].trim() : '';
+      }
+
+      function excerpt(md) {
+        var text = md
+          .replace(/```[\s\S]*?```/g, ' ')
+          .replace(/^#.*$/gm, '')
+          .replace(/[`*_#>~\[\]()!]/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+        return text.length > 180 ? text.slice(0, 180) + '…' : text;
+      }
+
+      function escapeHtml(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      }
+
+      function inlineMd(s) {
+        return escapeHtml(s)
+          .replace(/`([^`]+)`/g, '<code>$1</code>')
+          .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+          .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
+      }
+
+      function miniMarkdown(md) {
+        var out = [];
+        var lines = md.replace(/\r\n/g, '\n').split('\n');
+        var inCode = false, codeBuf = [], para = [];
+        function flushPara() {
+          if (para.length) { out.push('<p>' + para.join('<br>') + '</p>'); para = []; }
+        }
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i];
+          if (/^```/.test(line)) {
+            flushPara();
+            if (inCode) { out.push('<pre><code>' + escapeHtml(codeBuf.join('\n')) + '</code></pre>'); codeBuf = []; }
+            inCode = !inCode;
+            continue;
+          }
+          if (inCode) { codeBuf.push(line); continue; }
+          if (/^###\s+/.test(line)) { flushPara(); out.push('<h3>' + inlineMd(line.replace(/^###\s+/, '')) + '</h3>'); }
+          else if (/^##\s+/.test(line)) { flushPara(); out.push('<h2>' + inlineMd(line.replace(/^##\s+/, '')) + '</h2>'); }
+          else if (/^#\s+/.test(line)) { flushPara(); out.push('<h1>' + inlineMd(line.replace(/^#\s+/, '')) + '</h1>'); }
+          else if (/^>\s?/.test(line)) { flushPara(); out.push('<blockquote>' + inlineMd(line.replace(/^>\s?/, '')) + '</blockquote>'); }
+          else if (/^[-*]\s+/.test(line)) { flushPara(); out.push('<li>' + inlineMd(line.replace(/^[-*]\s+/, '')) + '</li>'); }
+          else if (/^\d+\.\s+/.test(line)) { flushPara(); out.push('<li>' + inlineMd(line.replace(/^\d+\.\s+/, '')) + '</li>'); }
+          else if (/^\s*$/.test(line)) { flushPara(); }
+          else { para.push(inlineMd(line)); }
+        }
+        flushPara();
+        if (inCode) out.push('<pre><code>' + escapeHtml(codeBuf.join('\n')) + '</code></pre>');
+        return out.join('\n');
+      }
+
+      function renderMarkdown(md) {
+        if (window.marked && typeof window.marked.parse === 'function') {
+          try { return window.marked.parse(md); }
+          catch (e) {}
+        }
+        if (window.marked && typeof window.marked === 'function') {
+          try { return window.marked(md); }
+          catch (e) {}
+        }
+        return miniMarkdown(md);
+      }
+
+      function renderPostList() {
+        postList.innerHTML = '';
+        posts.sort(function (a, b) {
+          var da = a.date ? +a.date : 0;
+          var db = b.date ? +b.date : 0;
+          if (da !== db) return db - da;
+          return a.slug < b.slug ? 1 : -1;
+        });
+        posts.forEach(function (post) {
+          var card = document.createElement('article');
+          card.className = 'card post-card';
+
+          var h3 = el('h3');
+          var titleLink = el('a', null, post.title);
+          titleLink.href = '#post/' + encodeURIComponent(post.slug);
+          titleLink.addEventListener('click', function (e) { e.preventDefault(); showPost(post.slug); });
+          h3.appendChild(titleLink);
+          card.appendChild(h3);
+
+          if (post.date) {
+            var meta = el('p', 'meta');
+            meta.appendChild(label('publishedLabel'));
+            meta.appendChild(document.createTextNode(' ' + formatDate(post.date)));
+            card.appendChild(meta);
+          }
+
+          var ex = excerpt(post.md);
+          if (ex) card.appendChild(el('p', null, ex));
+
+          var linkP = el('p', 'post-link');
+          var readLink = el('a', null, '');
+          readLink.href = '#post/' + encodeURIComponent(post.slug);
+          readLink.setAttribute('data-i18n', 'readPost');
+          readLink.addEventListener('click', function (e) { e.preventDefault(); showPost(post.slug); });
+          linkP.appendChild(readLink);
+          card.appendChild(linkP);
+
+          postList.appendChild(card);
+        });
+        if (!posts.length) postsEmpty.hidden = false;
+      }
+
+      function showPost(slug) {
+        var post = null;
+        for (var i = 0; i < posts.length; i++) {
+          if (posts[i].slug === slug) { post = posts[i]; break; }
+        }
+        if (!post) return;
+        location.hash = '#post/' + encodeURIComponent(post.slug);
+        postView.innerHTML = '';
+
+        var back = el('p', 'back-link');
+        var backA = el('a', null, '');
+        backA.href = '#posts';
+        backA.setAttribute('data-i18n', 'backToPosts');
+        backA.addEventListener('click', function (e) { e.preventDefault(); showList(); });
+        back.appendChild(backA);
+        postView.appendChild(back);
+
+        postView.appendChild(el('h2', null, post.title));
+        if (post.date) {
+          var meta = el('p', 'meta');
+          meta.appendChild(label('publishedLabel'));
+          meta.appendChild(document.createTextNode(' ' + formatDate(post.date)));
+          postView.appendChild(meta);
+        }
+
+        var body = document.createElement('div');
+        body.className = 'post-body';
+        body.innerHTML = renderMarkdown(post.md);
+        postView.appendChild(body);
+
+        postList.hidden = true;
+        postView.hidden = false;
+        window.scrollTo(0, 0);
+        if (window.I18N) window.I18N.apply(window.I18N.getLang());
+      }
+
+      function showList() {
+        location.hash = '#posts';
+        postView.hidden = true;
+        postList.hidden = false;
+        if (window.I18N) window.I18N.apply(window.I18N.getLang());
+      }
+
+      window.addEventListener('hashchange', function () {
+        var m = location.hash.match(/^#post\/(.+)$/);
+        if (m) showPost(decodeURIComponent(m[1]));
+        else if (!location.hash || location.hash === '#posts') showList();
+      });
+
+      function applyHash() {
+        var m = location.hash.match(/^#post\/(.+)$/);
+        if (m) showPost(decodeURIComponent(m[1]));
+        else showList();
+      }
+
+      /* ---------- Init: show content instantly, then upgrade with live repo data ---------- */
+      posts = FALLBACK_POSTS.slice();
+      renderPostList();
+      applyHash();
+
+      function loadLivePosts() {
+        var url = 'https://api.github.com/repos/' + REPO + '/contents/docs/blog/posts?ref=' + BRANCH;
+        fetchWithTimeout(url, 8000)
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+          })
+          .then(function (files) {
+            if (!Array.isArray(files)) throw new Error('Unexpected response');
+            var mdFiles = files.filter(function (f) {
+              return f.type === 'file' && /\.md$/i.test(f.name);
+            });
+            if (!mdFiles.length) throw new Error('No posts found');
+            mdFiles.sort(function (a, b) { return a.name < b.name ? 1 : -1; });
+            return Promise.all(mdFiles.map(function (f) {
+              return fetch(f.download_url)
+                .then(function (r) { return r.ok ? r.text() : ''; })
+                .then(function (md) {
+                  var slug = f.name.replace(/\.md$/i, '');
+                  var existing = null;
+                  for (var i = 0; i < posts.length; i++) {
+                    if (posts[i].slug === slug) { existing = posts[i]; break; }
+                  }
+                  if (existing) {
+                    existing.title = titleFromMd(md) || existing.title;
+                    existing.date = parseDate(f.name) || existing.date;
+                    existing.md = md;
+                  } else {
+                    posts.push({
+                      slug: slug,
+                      title: titleFromMd(md) || slug,
+                      date: parseDate(f.name),
+                      md: md
+                    });
+                  }
+                });
+            }));
+          })
+          .then(function () {
+            if (!postView.hidden) return;
+            renderPostList();
+            applyHash();
+          })
+          .catch(function () {});
+      }
+
+      loadYouTube();
+      loadLivePosts();
+    })();
+  </script>
 </body>
 </html>

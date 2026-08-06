@@ -207,10 +207,36 @@ article p { margin: 6px 0; }
 /* blog post cards */
 .post-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 .post-card { padding: 22px; }
-.post-card .meta { flex-grow: 0; }
-.post-card .post-link { margin: 0; }
-.post-card .post-link a { font-weight: 600; color: var(--accent); }
-.post-card .post-link a:hover { color: var(--focus); text-decoration: none; }
+.post-card .meta, .video-card .meta { flex-grow: 0; }
+.post-card .post-link, .video-card .post-link { margin: 0; }
+.post-card .post-link a, .video-card .post-link a { font-weight: 600; color: var(--accent); }
+.post-card .post-link a:hover, .video-card .post-link a:hover { color: var(--focus); text-decoration: none; }
+
+/* video cards */
+.video-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.video-card .video-thumb {
+  display: block; border-radius: 10px; overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 0 0 10px;
+}
+.video-card .video-thumb img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.video-card .video-thumb:hover { border-color: rgba(91, 140, 255, 0.5); }
+
+/* markdown post body */
+.post-view { margin-top: 8px; }
+.post-view h2 { margin: 0 0 4px; }
+.post-body { margin-top: 16px; line-height: 1.75; }
+.post-body h3 { margin: 28px 0 8px; font-size: 1.3rem; }
+.post-body p { margin: 0 0 14px; max-width: 72ch; }
+.post-body ul, .post-body ol { padding-left: 24px; margin: 0 0 14px; }
+.post-body li { margin: 4px 0; }
+.post-body a { color: var(--accent); }
+.post-body blockquote { border-left: 3px solid var(--accent); margin: 0 0 14px; padding-left: 16px; color: var(--text-muted); }
+.post-body pre { background: rgba(27, 31, 39, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); padding: 14px; border-radius: 10px; overflow-x: auto; margin: 0 0 14px; }
+.post-body code { background: rgba(27, 31, 39, 0.7); padding: 2px 6px; border-radius: 6px; font-size: 0.9em; }
+.post-body pre code { background: none; padding: 0; }
+.post-body img { border-radius: 10px; margin: 0 0 14px; }
+.post-body hr { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 
 /* GitHub repo list */
 .projects-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
@@ -250,7 +276,7 @@ article p { margin: 6px 0; }
 @media (max-width: 560px) {
   .hero { min-height: calc(100vh - 64px); }
   .nav-inner { flex-direction: column; align-items: flex-start; }
-  .card-grid, .projects-grid, .post-grid { grid-template-columns: 1fr; }
+  .card-grid, .projects-grid, .post-grid, .video-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
