@@ -154,16 +154,20 @@
   <script src="../js/i18n.js"></script>
   <script>
     (function () {
+      // --- Config: static database (no backend) ---
       var YT_CHANNEL = 'UCVgabwEiFAunNH6c7abqoCQ';
       var REPO = 'JorgeArguello1999/JorgeArguello1999';
       var BRANCH = 'pre-production';
+      var DATA_DB = '../data/db.json';
+      var DATA_YT = '../data/youtube.json';
+      var DATA_POSTS = '../data/posts.json';
 
       var posts = [];
       var FALLBACK_POSTS = [
         {
-          slug: '2026-09-04-welcome-to-my',
+          slug: '2026-08-04-welcome-to-my-blog',
           title: 'Welcome to my blog',
-          date: new Date(2026, 8, 4),
+          date: new Date(2026, 7, 4),
           md: '# Welcome to my blog\n\nis this a new blog?\n\nThis is my personal blog. Posts are written in **Markdown** and stored right in the repository under `docs/blog/posts/`, so they show up here automatically whenever I push a new file.\n\n## What to expect\n\n- Notes about code and software\n- Linux tips and tricks\n- Adventures in the open source world\n\n## How it works\n\nThis page reads the `blog/posts` directory from the GitHub repository, renders each `.md` file, and shows them newest first. No build step needed.\n\n> Tip: create a file like `2026-08-05-my-title.md` in the `posts` folder and it appears here.\n\n```bash\ngit add docs/blog/posts/\ngit commit -m "new post"\ngit push\n```\n\nThanks for reading!\n'
         }
       ];
@@ -199,13 +203,14 @@
         );
       }
 
-      /* ---------- YouTube ---------- */
+      /* ---------- YouTube (static first) ---------- */
       var videoGrid = document.getElementById('video-grid');
       var ytLoading = document.getElementById('yt-loading');
       var ytError = document.getElementById('yt-error');
       var ytEmpty = document.getElementById('yt-empty');
 
       function renderVideos(entries) {
+        // Legacy: entries are <entry> XML nodes
         entries.forEach(function (entry) {
           var title = (entry.getElementsByTagName('title')[0] || {}).textContent || '';
           var link = (entry.getElementsByTagName('link')[0] || {}).getAttribute ? entry.getElementsByTagName('link')[0].getAttribute('href') : '';
@@ -254,9 +259,63 @@
 
           videoGrid.appendChild(card);
         });
+        if (window.I18N) window.I18N.apply(window.I18N.getLang());
       }
 
-      function loadYouTube() {
+      function renderVideosFromJson(videos) {
+        videoGrid.innerHTML = '';
+        videos.forEach(function (v) {
+          var videoId = v.id;
+          var title = v.title || videoId;
+          var link = v.url || ('https://www.youtube.com/watch?v=' + videoId);
+          var published = v.published || v.updated || '';
+          var card = document.createElement('article');
+          card.className = 'card video-card';
+          var thumbLink = el('a', 'video-thumb');
+          thumbLink.href = link;
+          thumbLink.target = '_blank';
+          thumbLink.rel = 'noopener';
+          var img = el('img');
+          img.src = v.thumbnailMq || v.thumbnail || ('https://i.ytimg.com/vi/' + videoId + '/mqdefault.jpg');
+          img.alt = title;
+          img.loading = 'lazy';
+          thumbLink.appendChild(img);
+          card.appendChild(thumbLink);
+          var h3 = el('h3');
+          var titleLink = el('a', null, title);
+          titleLink.href = link;
+          titleLink.target = '_blank';
+          titleLink.rel = 'noopener';
+          h3.appendChild(titleLink);
+          card.appendChild(h3);
+          if (published) {
+            var meta = el('p', 'meta');
+            meta.appendChild(label('publishedLabel'));
+            meta.appendChild(document.createTextNode(' ' + formatDate(new Date(published))));
+            card.appendChild(meta);
+          }
+          if (v.description) {
+            var desc = el('p', 'meta', v.description);
+            desc.style.display = '-webkit-box';
+            desc.style.webkitLineClamp = '2';
+            desc.style.webkitBoxOrient = 'vertical';
+            desc.style.overflow = 'hidden';
+            card.appendChild(desc);
+          }
+          var linkP = el('p', 'post-link');
+          var watch = el('a', null, '');
+          watch.href = link;
+          watch.target = '_blank';
+          watch.rel = 'noopener';
+          watch.setAttribute('data-i18n', 'watchOnYouTube');
+          linkP.appendChild(watch);
+          card.appendChild(linkP);
+          videoGrid.appendChild(card);
+        });
+        if (window.I18N) window.I18N.apply(window.I18N.getLang());
+      }
+
+      function loadYouTubeLiveFallback() {
         var feed = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + YT_CHANNEL;
         var proxies = [
           'https://api.allorigins.win/raw?url=' + encodeURIComponent(feed),
@@ -293,7 +352,38 @@
         tryFetch(0);
       }
 
-      /* ---------- Markdown posts ---------- */
+      function loadYouTubeFromLocal() {
+        // Try db.json -> youtube.json -> live fallback
+        fetchWithTimeout(DATA_DB, 5000).then(function (res) {
+          if (!res.ok) throw new Error('no db');
+          return res.json();
+        }).then(function (db) {
+          var videos = (db && db.youtube && db.youtube.videos) ? db.youtube.videos : null;
+          if (Array.isArray(videos)) {
+            ytLoading.hidden = true;
+            if (!videos.length) { ytEmpty.hidden = false; return; }
+            renderVideosFromJson(videos);
+            return;
+          }
+          throw new Error('no videos in db');
+        }).catch(function () {
+          fetchWithTimeout(DATA_YT, 5000).then(function (res) {
+            if (!res.ok) throw new Error('no yt json');
+            return res.json();
+          }).then(function (data) {
+            var videos = data.videos || (Array.isArray(data) ? data : []);
+            // support wrapped {videos:[]} or direct array
+            if (!Array.isArray(videos)) videos = [];
+            ytLoading.hidden = true;
+            if (!videos.length) { ytEmpty.hidden = false; return; }
+            renderVideosFromJson(videos);
+          }).catch(function () {
+            loadYouTubeLiveFallback();
+          });
+        });
+      }
+
+      /* ---------- Markdown posts (static first) ---------- */
       var postList = document.getElementById('post-list');
       var postsEmpty = document.getElementById('posts-empty');
 
@@ -316,6 +406,30 @@
           .replace(/\s+/g, ' ')
           .trim();
         return text.length > 180 ? text.slice(0, 180) + '…' : text;
+      }
+
+      function normalizePost(p) {
+        // Supports new posts.json {slug,title,date/md/content} and legacy {slug,title,date,md}
+        var dateObj = null;
+        if (p.date instanceof Date) dateObj = p.date;
+        else if (typeof p.date === 'string' && p.date) {
+          // can be YYYY-MM-DD or ISO
+          var m = p.date.match(/^(\d{4}-\d{2}-\d{2})/);
+          if (m) dateObj = new Date(m[1] + 'T00:00:00');
+          else dateObj = new Date(p.date);
+        } else if (p.published) {
+          dateObj = new Date(p.published);
+        } else if (p.slug) {
+          dateObj = parseDate(p.slug);
+        }
+        if (dateObj && isNaN(dateObj.getTime())) dateObj = null;
+        return {
+          slug: p.slug,
+          title: p.title || titleFromMd(p.content || p.md || ''),
+          date: dateObj,
+          md: p.content || p.md || '',
+          excerpt: p.excerpt || excerpt(p.content || p.md || '')
+        };
       }
 
       function renderPostList() {
@@ -343,7 +457,7 @@
             card.appendChild(meta);
           }
 
-          var ex = excerpt(post.md);
+          var ex = post.excerpt || excerpt(post.md);
           if (ex) card.appendChild(el('p', null, ex));
 
           var linkP = el('p', 'post-link');
@@ -356,13 +470,38 @@
           postList.appendChild(card);
         });
         if (!posts.length) postsEmpty.hidden = false;
-        document.getElementById('posts-loading').hidden = true;
+        else postsEmpty.hidden = true;
+        var pl = document.getElementById('posts-loading');
+        if (pl) pl.hidden = true;
         if (window.I18N) window.I18N.apply(window.I18N.getLang());
       }
 
-      /* ---------- Init: show content instantly, then upgrade with live repo data ---------- */
-      posts = FALLBACK_POSTS.slice();
-      renderPostList();
+      function loadPostsFromLocal() {
+        fetchWithTimeout(DATA_DB, 5000).then(function (res) {
+          if (!res.ok) throw new Error('no db');
+          return res.json();
+        }).then(function (db) {
+          if (db && Array.isArray(db.posts) && db.posts.length) {
+            posts = db.posts.map(normalizePost);
+            renderPostList();
+            return true;
+          }
+          throw new Error('no posts in db');
+        }).catch(function () {
+          fetchWithTimeout(DATA_POSTS, 5000).then(function (res) {
+            if (!res.ok) throw new Error('no posts json');
+            return res.json();
+          }).then(function (data) {
+            var arr = Array.isArray(data) ? data : (data.posts || []);
+            if (!Array.isArray(arr) || !arr.length) throw new Error('empty');
+            posts = arr.map(normalizePost);
+            renderPostList();
+          }).catch(function () {
+            // fallback to GitHub API (compatibility) and FALLBACK_POSTS
+            loadLivePosts();
+          });
+        });
+      }
 
       function loadLivePosts() {
         var url = 'https://api.github.com/repos/' + REPO + '/contents/docs/blog/posts?ref=' + BRANCH;
@@ -403,13 +542,26 @@
             }));
           })
           .then(function () {
+            if (!posts.length) {
+              posts = FALLBACK_POSTS.map(normalizePost);
+            }
             renderPostList();
           })
-          .catch(function () {});
+          .catch(function () {
+            if (!posts.length) {
+              posts = FALLBACK_POSTS.map(normalizePost);
+              renderPostList();
+            }
+          });
       }
 
-      loadYouTube();
-      loadLivePosts();
+      /* ---------- Init ---------- */
+      // Show instant fallback while local DB loads (improves CLS)
+      posts = FALLBACK_POSTS.map(normalizePost);
+      renderPostList();
+
+      loadYouTubeFromLocal();
+      loadPostsFromLocal();
     })();
   </script>
 </body>

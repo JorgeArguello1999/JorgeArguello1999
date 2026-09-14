@@ -1,0 +1,46 @@
+name: Update static DB (YouTube + Blog)
+
+on:
+  push:
+    branches: [main, pre-production, production]
+    paths:
+      - "docs/blog/posts/**"
+      - "scripts/update-data.js"
+      - "docs/data/**"
+  schedule:
+    # Cada lunes 06:00 UTC -> actualiza videos de YouTube
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Update data
+        run: node scripts/update-data.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git status --porcelain
+          if [ -n "$(git status --porcelain docs/data)" ]; then
+            git add docs/data/youtube.json docs/data/posts.json docs/data/db.json
+            git commit -m "chore(data): update youtube + blog db [skip ci]"
+            git push
+          else
+            echo "No changes in docs/data"
+          fi

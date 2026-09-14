@@ -1,0 +1,13 @@
+{
+  "name": "jorge-arguello-website",
+  "private": true,
+  "type": "commonjs",
+  "description": "Personal website — static, no backend, YouTube + Blog as JSON DB",
+  "scripts": {
+    "update:data": "node scripts/update-data.js",
+    "serve": "python3 -m http.server 8000 --directory docs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

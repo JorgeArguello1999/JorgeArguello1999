@@ -1,0 +1,30 @@
+{
+  "channel": {
+    "id": "UCVgabwEiFAunNH6c7abqoCQ",
+    "handle": "@al3x_argu",
+    "title": "Jorge Alexander Arguello",
+    "url": "https://www.youtube.com/@al3x_argu",
+    "channelUrl": "https://www.youtube.com/channel/UCVgabwEiFAunNH6c7abqoCQ",
+    "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVgabwEiFAunNH6c7abqoCQ"
+  },
+  "updatedAt": "2026-09-14T22:40:11.914Z",
+  "videos": [
+    {
+      "id": "uqhT36XLffI",
+      "title": "Proyecto Innovador Gestor de Productos",
+      "url": "https://www.youtube.com/watch?v=uqhT36XLffI",
+      "embedUrl": "https://www.youtube.com/embed/uqhT36XLffI",
+      "published": "2022-01-26T05:26:44+00:00",
+      "updated": "2026-05-24T05:05:02+00:00",
+      "author": "Jorge Alexander Arguello",
+      "description": "Video explicativo para el uso del Software Gestor de Productos",
+      "thumbnail": "https://i2.ytimg.com/vi/uqhT36XLffI/hqdefault.jpg",
+      "thumbnailMq": "https://i.ytimg.com/vi/uqhT36XLffI/mqdefault.jpg",
+      "thumbnailHq": "https://i.ytimg.com/vi/uqhT36XLffI/hqdefault.jpg",
+      "thumbnailMax": "https://i.ytimg.com/vi/uqhT36XLffI/maxresdefault.jpg",
+      "views": 63,
+      "starRating": 5,
+      "starCount": 4
+    }
+  ]
+}
