@@ -1,14 +1,13 @@
-name: Update static DB (YouTube + Blog)
+name: Update static DB (YouTube)
 
 on:
   push:
     branches: [main, pre-production, production]
     paths:
-      - "docs/blog/posts/**"
       - "scripts/update-data.js"
       - "docs/data/**"
   schedule:
-    # Cada lunes 06:00 UTC -> actualiza videos de YouTube
+    # Every Monday 06:00 UTC -> refresh YouTube videos
     - cron: "0 6 * * 1"
   workflow_dispatch:
 
@@ -38,8 +37,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git status --porcelain
           if [ -n "$(git status --porcelain docs/data)" ]; then
-            git add docs/data/youtube.json docs/data/posts.json docs/data/db.json
-            git commit -m "chore(data): update youtube + blog db [skip ci]"
+            git add docs/data/youtube.json docs/data/db.json
+            git commit -m "chore(data): update youtube db [skip ci]"
             git push
           else
             echo "No changes in docs/data"

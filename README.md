@@ -38,8 +38,7 @@ Currently focused on **Python, Rust, and JavaScript**, I actively contribute to 
 
 - 🛠️ Build clean, accessible, performant web experiences
 - 🐧 Advocate for Linux and open-source workflows
-- 📝 Write notes about code, tooling, and lessons learned — see my [Blog](https://www.jorgearguello.net/blog/)
-- 🎥 Share knowledge on [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu)
+- 🎥 Share knowledge through videos on [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu) — updated on every request
 - 🤝 Collaborate with communities, especially PyCommunity-es
 
 </details>
@@ -59,8 +58,7 @@ Actualmente enfocado en **Python, Rust y JavaScript**, contribuyo activamente a 
 
 - 🛠️ Construyo experiencias web limpias, accesibles y rápidas
 - 🐧 Promuevo Linux y flujos de trabajo open source
-- 📝 Escribo notas sobre código, herramientas y aprendizajes — mira mi [Blog](https://www.jorgearguello.net/blog/)
-- 🎥 Comparto conocimiento en [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu)
+- 🎥 Comparto conocimiento en videos en [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu) — actualizados en cada petición
 - 🤝 Colaboro con comunidades, especialmente PyCommunity-es
 
 </details>
@@ -80,8 +78,7 @@ Actualmente enfocado en **Python, Rust y JavaScript**, contribuyo activamente a 
 
 - 🛠️ 깔끔하고 접근성이 뛰어나며 빠른 웹 경험 구축
 - 🐧 Linux와 오픈소스 워크플로우 옹호
-- 📝 코드, 도구, 배운 점에 대한 기록 — [블로그](https://www.jorgearguello.net/blog/)에서 확인하세요
-- 🎥 [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu)에서 지식 공유
+- 🎥 [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu)에서 비디오로 지식 공유 — 매 요청마다 업데이트
 - 🤝 커뮤니티 협업, 특히 PyCommunity-es
 
 </details>
@@ -114,7 +111,7 @@ Actualmente enfocado en **Python, Rust y JavaScript**, contribuyo activamente a 
 
 > Live from GitHub — always up to date on [jorgearguello.net/projects](https://www.jorgearguello.net/projects/)
 
-- **This Website** — Minimalist, accessible, dark-themed static site with EN/ES/KO i18n, no backend, static JSON DB for blog + YouTube. [`docs/`](https://github.com/JorgeArguello1999/JorgeArguello1999/tree/pre-production/docs) · Live: [jorgearguello.net](https://www.jorgearguello.net)
+- **This Website** — Minimalist, accessible, dark-themed static site with EN/ES/KO i18n, no backend, YouTube DB updated on every request. [`docs/`](https://github.com/JorgeArguello1999/JorgeArguello1999/tree/pre-production/docs) · Live: [jorgearguello.net](https://www.jorgearguello.net)
 - More public repos are auto-listed on the site via GitHub API. Explore: [github.com/JorgeArguello1999?tab=repositories](https://github.com/JorgeArguello1999?tab=repositories)
 
 <div align="center">
@@ -125,14 +122,14 @@ Actualmente enfocado en **Python, Rust y JavaScript**, contribuyo activamente a 
 
 ---
 
-## ✍️ Writing & 🎥 Videos
+## 🎥 Videos
 
 <div align="center">
 
-| Blog | YouTube |
-|:---:|:---:|
-| [jorgearguello.net/blog](https://www.jorgearguello.net/blog/) | [@al3x_argu](https://www.youtube.com/@al3x_argu) |
-| Markdown posts in `docs/blog/posts/` · Static DB · No backend | Channel `UCVgabwEiFAunNH6c7abqoCQ` · Auto-synced via RSS |
+| YouTube |
+|:---:|
+| [@al3x_argu](https://www.youtube.com/@al3x_argu) |
+| Channel `UCVgabwEiFAunNH6c7abqoCQ` · Auto-synced via RSS · Updated on every request |
 
 </div>
 
@@ -142,13 +139,9 @@ Actualmente enfocado en **Python, Rust y JavaScript**, contribuyo activamente a 
 
 *Proyecto Innovador Gestor de Productos — Click to watch on YouTube →*
 
-**Latest posts:**
+> Videos are fetched live on every request via YouTube RSS (`youtube.json` is only a fallback). No markdown blog — database updates automatically when you publish a new public video.
 
-- [Welcome to my blog](https://www.jorgearguello.net/blog/post.html?slug=2026-09-04-welcome-to-my) — *Sep 4, 2026*
-- [Welcome to my blog](https://www.jorgearguello.net/blog/post.html?slug=2026-08-04-welcome-to-my-blog) — *Aug 4, 2026*
-- *New: [Hello World — Welcome to my new blog!](https://www.jorgearguello.net/blog/post.html?slug=2026-09-14-welcome) — Sep 14, 2026*
-
-> Add a post with `docs/blog/posts/YYYY-MM-DD-slug.md` + `npm run update:data` — site updates automatically, no backend needed.
+Explore all videos: [jorgearguello.net/blog](https://www.jorgearguello.net/blog/) (now videos-only, per-request update)
 
 ---
 
@@ -194,17 +187,14 @@ Actualmente enfocado en **Python, Rust y JavaScript**, contribuyo activamente a 
 │   ├── about/          # About section
 │   ├── projects/       # Projects section (live GitHub API)
 │   ├── blog/
-│   │   ├── index.html  # Blog (videos + posts)
-│   │   ├── post.html   # Single post view
-│   │   └── posts/      # Markdown posts (YYYY-MM-DD-slug.md)
-│   ├── data/           # Static DB (generated, no backend)
-│   │   ├── youtube.json # Videos from @al3x_argu
-│   │   ├── posts.json   # Posts index
-│   │   └── db.json      # Combined
+│   │   └── index.html  # Videos (YouTube, per-request update)
+│   ├── data/           # Static DB fallback (generated, no backend)
+│   │   ├── youtube.json # Videos from @al3x_argu (fallback)
+│   │   └── db.json      # Combined (youtube + site)
 │   ├── css/theme.css
 │   └── js/i18n.js      # EN / ES / KO engine (code in English)
 ├── scripts/
-│   └── update-data.js  # Generates docs/data/*.json (English code)
+│   └── update-data.js  # Generates youtube.json/db.json (English code)
 └── .github/workflows/update-data.yml
 ```
 
@@ -216,24 +206,24 @@ python3 -m http.server 8000 --directory docs
 npm run serve
 ```
 
-### Data — no backend
+### Data — no backend, per-request update
 
-YouTube (`@al3x_argu`, `UCVgabwEiFAunNH6c7abqoCQ`) via `https://www.youtube.com/feeds/videos.xml?channel_id=...` and blog markdown are built into static JSON.
+YouTube (`@al3x_argu`, `UCVgabwEiFAunNH6c7abqoCQ`) via `https://www.youtube.com/feeds/videos.xml?channel_id=...` is fetched live on every request. Static `youtube.json`/`db.json` are only fallbacks.
 
 ```bash
 npm run update:data
 # or
 node scripts/update-data.js
-# -> docs/data/youtube.json, posts.json, db.json
+# -> docs/data/youtube.json, db.json (fallback)
 ```
 
-Add a post: `docs/blog/posts/2026-09-14-my-post.md` with `# Title` on top, then run the script, commit `docs/data` + `docs/blog/posts`.
+No markdown blog — to publish a new video, just upload a public video to YouTube; it appears on the site on the next request (live RSS via `api.allorigins.win`). The static fallback is refreshed weekly by the workflow.
 
-Frontend: `fetch('../data/db.json') -> youtube.json/posts.json -> fallback RSS/GitHub API -> inline fallback`.
+Frontend: `live RSS (allorigins) -> fallback to ../data/db.json -> ../data/youtube.json` — database updated on every request.
 
 ### Automation
 
-- On push to `main`/`pre-production` touching posts/scripts, and weekly on Mondays `0 6 * * 1` to refresh YouTube
+- Weekly on Mondays `0 6 * * 1` to refresh YouTube fallback
 - Manual: Actions → Update static DB → Run workflow
 
 ### Deploy

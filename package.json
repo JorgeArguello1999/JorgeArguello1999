@@ -2,7 +2,7 @@
   "name": "jorge-arguello-website",
   "private": true,
   "type": "commonjs",
-  "description": "Personal website — static, no backend, YouTube + Blog as JSON DB",
+  "description": "Personal website — static, no backend, YouTube as JSON DB updated on every request",
   "scripts": {
     "update:data": "node scripts/update-data.js",
     "serve": "python3 -m http.server 8000 --directory docs"

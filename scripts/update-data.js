@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 /**
- * update-data.js — Generate static "database" without backend
+ * update-data.js — Generate static YouTube database without backend
  *
- * 1) Fetch YouTube RSS feed (@al3x_argu -> UCVgabwEiFAunNH6c7abqoCQ)
- * 2) Read all markdown files in docs/blog/posts/*.md and generate posts.json
- * 3) Write docs/data/youtube.json, posts.json and db.json
+ * Fetches YouTube RSS feed (@al3x_argu -> UCVgabwEiFAunNH6c7abqoCQ)
+ * and writes docs/data/youtube.json and docs/data/db.json.
+ * Database is updated on every request via live fetch in the frontend;
+ * this script provides a static fallback for offline/cached loads.
  *
  * Usage:
  *   node scripts/update-data.js          # local
  *   node scripts/update-data.js --force  # force fetch even if cached
  *
  * No external dependencies required. Requires Node >= 18 (native fetch).
- * In CI (GitHub Actions) it runs on every push and weekly.
+ * In CI (GitHub Actions) it runs weekly to refresh the fallback.
  */
 
 const fs = require('fs');
@@ -19,7 +20,6 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'docs', 'data');
-const POSTS_DIR = path.join(ROOT, 'docs', 'blog', 'posts');
 
 const YT_CHANNEL_ID = 'UCVgabwEiFAunNH6c7abqoCQ';
 const YT_HANDLE = '@al3x_argu';
@@ -31,29 +31,9 @@ function warn(msg) { console.warn(`[update-data] WARN: ${msg}`); }
 
 function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
 
-function parseDateFromSlug(name) {
-  const m = name.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  if (!m) return null;
-  return `${m[1]}-${m[2]}-${m[3]}`;
-}
-
-function titleFromMd(md) {
-  const m = md.match(/^#\s+(.+)$/m);
-  return m ? m[1].trim() : '';
-}
-
-function excerptFromMd(md) {
-  let text = md.replace(/```[\s\S]*?```/g, ' ');
-  text = text.replace(/^#.*$/gm, '');
-  text = text.replace(/[`*_#>~\[\]()!]/g, '');
-  text = text.replace(/\s+/g, ' ').trim();
-  return text.length > 180 ? text.slice(0, 180) + '…' : text;
-}
-
 // Very simple XML parser for YouTube Atom feed (no deps)
 function parseYouTubeFeed(xmlText) {
   const videos = [];
-  // channel title
   const channelTitleMatch = xmlText.match(/<feed[^>]*>[\s\S]*?<title>([^<]+)<\/title>/);
   const channelTitle = channelTitleMatch ? channelTitleMatch[1].trim() : 'Jorge Alexander Arguello';
 
@@ -61,11 +41,6 @@ function parseYouTubeFeed(xmlText) {
   let m;
   while ((m = entryRegex.exec(xmlText)) !== null) {
     const entry = m[1];
-    const get = (tag) => {
-      const r = entry.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`));
-      return r ? r[1].trim() : '';
-    };
-    // yt:videoId, title, link href, published, updated, author/name, media:description, media:thumbnail, media:statistics, media:starRating
     const idMatch = entry.match(/<yt:videoId>([^<]+)<\/yt:videoId>/);
     const titleMatch = entry.match(/<title>([^<]+)<\/title>/);
     const linkMatch = entry.match(/<link[^>]*href="([^"]+)"[^>]*\/>/);
@@ -82,7 +57,6 @@ function parseYouTubeFeed(xmlText) {
     if (!id) continue;
     const title = titleMatch ? titleMatch[1].trim() : id;
     const url = linkMatch ? linkMatch[1].trim() : `https://www.youtube.com/watch?v=${id}`;
-    // link may be alternate without yt, try fallback
     const hrefFallback = linkMatch ? linkMatch[1] : `https://www.youtube.com/watch?v=${id}`;
 
     videos.push({
@@ -126,52 +100,10 @@ async function fetchYouTube() {
   }
 }
 
-function loadPosts() {
-  if (!fs.existsSync(POSTS_DIR)) {
-    warn(`Posts dir not found: ${POSTS_DIR}`);
-    return [];
-  }
-  const files = fs.readdirSync(POSTS_DIR).filter(f => /\.md$/i.test(f));
-  files.sort((a, b) => (a < b ? 1 : -1)); // newest first (lexicographic with YYYY-MM-DD prefix)
-  const posts = [];
-  for (const file of files) {
-    const full = path.join(POSTS_DIR, file);
-    try {
-      const md = fs.readFileSync(full, 'utf8');
-      const slug = file.replace(/\.md$/i, '');
-      const title = titleFromMd(md) || slug;
-      const date = parseDateFromSlug(file); // YYYY-MM-DD
-      const excerpt = excerptFromMd(md);
-      const published = date ? new Date(date + 'T00:00:00.000Z').toISOString() : null;
-      posts.push({
-        slug,
-        title,
-        date, // YYYY-MM-DD for compatibility with frontend parseDate()
-        published,
-        excerpt,
-        file,
-        content: md,
-      });
-      log(`Post: ${slug} -> "${title}"`);
-    } catch (e) {
-      warn(`Error reading ${file}: ${e.message}`);
-    }
-  }
-  // sort by date desc, fallback slug
-  posts.sort((a, b) => {
-    const da = a.date ? +new Date(a.date) : 0;
-    const db = b.date ? +new Date(b.date) : 0;
-    if (da !== db) return db - da;
-    return a.slug < b.slug ? 1 : -1;
-  });
-  return posts;
-}
-
 async function main() {
   ensureDir(DATA_DIR);
   const updatedAt = new Date().toISOString();
 
-  // 1. YouTube
   let ytData = null;
   let ytResult = await fetchYouTube();
 
@@ -182,7 +114,6 @@ async function main() {
       log('Using existing youtube.json as fallback');
       try {
         ytData = JSON.parse(fs.readFileSync(existingYtPath, 'utf8'));
-        // update timestamp
         ytData.updatedAt = updatedAt;
       } catch (_) {
         ytData = null;
@@ -223,19 +154,12 @@ async function main() {
     ytData.videos.sort((a, b) => new Date(b.published) - new Date(a.published));
   }
 
-  // 2. Posts
-  const posts = loadPosts();
-
-  // 3. Write files
+  // Write files
   const ytPath = path.join(DATA_DIR, 'youtube.json');
-  const postsPath = path.join(DATA_DIR, 'posts.json');
   const dbPath = path.join(DATA_DIR, 'db.json');
 
   fs.writeFileSync(ytPath, JSON.stringify(ytData, null, 2) + '\n', 'utf8');
   log(`Wrote ${ytPath} (${ytData.videos.length} videos)`);
-
-  fs.writeFileSync(postsPath, JSON.stringify(posts, null, 2) + '\n', 'utf8');
-  log(`Wrote ${postsPath} (${posts.length} posts)`);
 
   const db = {
     site: {
@@ -245,7 +169,6 @@ async function main() {
       updatedAt,
     },
     youtube: ytData,
-    posts,
   };
   fs.writeFileSync(dbPath, JSON.stringify(db, null, 2) + '\n', 'utf8');
   log(`Wrote ${dbPath}`);
@@ -253,9 +176,8 @@ async function main() {
   // Summary
   console.log('\n=== Summary ===');
   console.log(`YouTube videos: ${ytData.videos.length}`);
-  console.log(`Blog posts: ${posts.length}`);
   console.log(`updatedAt: ${updatedAt}`);
-  console.log('Done. Data will be loaded without backend on every GitHub Pages deploy.');
+  console.log('Done. Database will be updated on every request via live fetch; static files are fallback.');
 }
 
 main().catch(e => {
