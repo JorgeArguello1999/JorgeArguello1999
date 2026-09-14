@@ -105,21 +105,26 @@ Explore all repos: [github.com/JorgeArguello1999?tab=repositories](https://githu
 
 <div align="center">
 
+<!-- Row 1: Stats + Top Languages (working mirrors, tokyonight / dark) -->
 <a href="https://github.com/JorgeArguello1999">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=JorgeArguello1999&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000000&title_color=0A84FF&text_color=f5f5f7&icon_color=0A84FF&count_private=true" alt="GitHub Stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JorgeArguello1999&layout=compact&theme=tokyonight&hide_border=true&bg_color=000000&title_color=0A84FF&text_color=f5f5f7&langs_count=6" alt="Top Langs" />
+  <img height="165" src="https://github-stats-alpha.vercel.app/api?username=JorgeArguello1999&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000000&title_color=0A84FF&text_color=f5f5f7&icon_color=0A84FF&count_private=true" alt="GitHub Stats" />
+  <img height="165" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=JorgeArguello1999&layout=compact&theme=tokyonight&hide_border=true&bg_color=000000&title_color=0A84FF&text_color=f5f5f7&langs_count=6" alt="Top Langs" />
 </a>
 
 <br/>
 
+<!-- Row 2: Streak + Contribution Graph -->
 <a href="https://github.com/JorgeArguello1999">
   <img height="150" src="https://streak-stats.demolab.com?user=JorgeArguello1999&theme=tokyonight&hide_border=true&background=000000&fire=0A84FF&ring=0A84FF&currStreakLabel=f5f5f7&currStreakNum=f5f5f7&sideNums=f5f5f7&sideLabels=f5f5f7" alt="GitHub Streak" />
-  <img height="150" src="https://github-readme-activity-graph.vercel.app/graph?username=JorgeArguello1999&bg_color=000000&color=f5f5f7&line=0A84FF&point=0A84FF&area=true&hide_border=true" alt="Activity Graph" />
+  <img height="150" src="https://ghchart.rshah.org/JorgeArguello1999" alt="Contribution Graph" />
 </a>
 
 <br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=JorgeArguello1999&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=15&margin-h=15" alt="Trophies" />
+<!-- Row 3: Trophies (working mirror) -->
+<a href="https://github.com/JorgeArguello1999">
+  <img src="https://github-trophy.vercel.app/?username=JorgeArguello1999&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=15&margin-h=15" alt="Trophies" />
+</a>
 
 </div>
 
