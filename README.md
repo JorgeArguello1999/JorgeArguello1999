@@ -7,9 +7,9 @@
 **Fullstack Python Developer — AI • Docker/Linux • ESP32/Arduino IoT**
 
 [![Website](https://img.shields.io/badge/Website-jorgearguello.net-0A84FF?style=for-the-badge&logo=safari&logoColor=white)](https://www.jorgearguello.net)
-[![YouTube](https://img.shields.io/badge/YouTube-@al3x__argu-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@al3x_argu)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-JorgeArgüello-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jorgearguello1999)
 [![Twitter](https://img.shields.io/badge/Twitter-@al3x__argu-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/al3x_argu)
+[![YouTube](https://img.shields.io/badge/YouTube-@al3x__argu-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@al3x_argu)
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&center=true&vCenter=true&width=700&height=35&color=0A84FF&lines=Fullstack+Python+Developer+%7C+AI+%26+IoT+Enthusiast;Python+%E2%80%A2+AI+%E2%80%A2+Docker%2FLinux+%E2%80%A2+ESP32%2FArduino;Building+AI+%26+scalable+server+solutions+for+people" alt="Typing SVG" />
 
@@ -22,16 +22,25 @@
 
 *📍 Building scalable AI & IoT solutions · 🐧 Linux & open source advocate · 🤝 Community contributor*
 
-**[🇺🇸 English](#-english) • [🇪🇸 Español](#-español) • [🇰🇷 한국어](#-한국어)**
+</div>
+
+---
+
+<div align="center">
+
+### 🌐 Languages
+
+<a href="#-english"><img src="https://img.shields.io/badge/🇺🇸_English-0A84FF?style=for-the-badge" alt="English"></a>
+<a href="#-español"><img src="https://img.shields.io/badge/🇪🇸_Español-FF6F00?style=for-the-badge" alt="Español"></a>
+<a href="#-한국어"><img src="https://img.shields.io/badge/🇰🇷_한국어-2ea44f?style=for-the-badge" alt="한국어"></a>
+
+*Click a tab to jump to your language — tabs, not dropdowns, for a clean view.*
 
 </div>
 
 ---
 
-## 🌐 Choose your language / Elige tu idioma / 언어를 선택하세요
-
-<details open>
-<summary><b>🇺🇸 English — Click to expand</b></summary>
+<h2 id="-english">🇺🇸 English</h2>
 
 ### 👋 About Me
 
@@ -46,7 +55,6 @@ I work across the stack with **Python (FastAPI, Django, Flask), AI/ML, and moder
 - 🐍 **Fullstack Python + AI** — FastAPI APIs, AI/ML pipelines, and modern web frontends
 - 🐳 **Servers & DevOps** — Docker, Linux, CI/CD, deployment and management of scalable services
 - 🔌 **IoT** — ESP32/Arduino, sensors, firmware and cloud-connected hardware
-- 🎥 Share knowledge through videos on [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu) — **updated on every request**
 - 🤝 Collaborate with communities, especially PyCommunity-es
 
 ### ✨ Highlights
@@ -55,10 +63,9 @@ I work across the stack with **Python (FastAPI, Django, Flask), AI/ML, and moder
 - 🛠️ Automating infrastructure with Docker & Linux for reproducible, low-maintenance servers
 - 📡 Bridging software and hardware — ESP32/Arduino projects that talk to the cloud
 
-</details>
+---
 
-<details>
-<summary><b>🇪🇸 Español — Haz clic para expandir</b></summary>
+<h2 id="-español">🇪🇸 Español</h2>
 
 ### 👋 Sobre mí
 
@@ -73,7 +80,6 @@ Trabajo en todo el stack con **Python (FastAPI, Django, Flask), IA/ML y frontend
 - 🐍 **Fullstack Python + IA** — APIs con FastAPI, pipelines IA/ML y frontends modernos
 - 🐳 **Servidores y DevOps** — Docker, Linux, CI/CD y despliegue de servicios escalables
 - 🔌 **IoT** — ESP32/Arduino, sensores, firmware y hardware conectado a la nube
-- 🎥 Comparto conocimiento en videos en [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu) — **actualizados en cada petición**
 - 🤝 Colaboro con comunidades, especialmente PyCommunity-es
 
 ### ✨ Destacados
@@ -82,10 +88,9 @@ Trabajo en todo el stack con **Python (FastAPI, Django, Flask), IA/ML y frontend
 - 🛠️ Infraestructura automatizada con Docker y Linux
 - 📡 Software y hardware conectados — proyectos ESP32/Arduino en la nube
 
-</details>
+---
 
-<details>
-<summary><b>🇰🇷 한국어 — 클릭하여 펼치기</b></summary>
+<h2 id="-한국어">🇰🇷 한국어</h2>
 
 ### 👋 소개
 
@@ -100,7 +105,6 @@ Trabajo en todo el stack con **Python (FastAPI, Django, Flask), IA/ML y frontend
 - 🐍 **풀스택 Python + AI** — FastAPI 기반 API, AI/ML 파이프라인, 모던 프론트엔드
 - 🐳 **서버 & DevOps** — Docker, Linux, CI/CD, 확장 가능한 서비스 배포·운영
 - 🔌 **IoT** — ESP32/Arduino, 센서, 펌웨어 및 클라우드 연동 하드웨어
-- 🎥 [YouTube @al3x_argu](https://www.youtube.com/@al3x_argu)에서 비디오로 지식 공유 — **매 요청마다 업데이트**
 - 🤝 커뮤니티 협업, 특히 PyCommunity-es
 
 ### ✨ 하이라이트
@@ -108,8 +112,6 @@ Trabajo en todo el stack con **Python (FastAPI, Django, Flask), IA/ML y frontend
 - 🔬 Python 기반 AI — 프로토타입부터 배포까지
 - 🛠️ Docker/Linux 기반 자동화된 인프라
 - 📡 소프트웨어와 하드웨어의 연결 — 클라우드 연동 ESP32/Arduino
-
-</details>
 
 ---
 
@@ -160,32 +162,8 @@ Explore all repos: [github.com/JorgeArguello1999?tab=repositories](https://githu
 <div align="center">
 
 [![Projects](https://img.shields.io/badge/Explore_Projects-0A84FF?style=for-the-badge&logo=github&logoColor=white)](https://www.jorgearguello.net/projects)
-[![YouTube](https://img.shields.io/badge/Watch_Videos-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@al3x_argu)
 
 </div>
-
----
-
-## 🎥 Videos — Updated on Every Request
-
-<div align="center">
-
-| YouTube |
-|:---:|
-| [@al3x_argu](https://www.youtube.com/@al3x_argu) |
-| Channel `UCVgabwEiFAunNH6c7abqoCQ` · Auto-synced via RSS · **Updated on every request** |
-
-</div>
-
-**Latest video:**
-
-[![Proyecto Innovador Gestor de Productos](https://i.ytimg.com/vi/uqhT36XLffI/hqdefault.jpg)](https://www.youtube.com/watch?v=uqhT36XLffI)
-
-*Proyecto Innovador Gestor de Productos — Click to watch on YouTube →*
-
-> Videos are fetched **live on every request** via YouTube RSS (`youtube.json` is only a fallback). Publish a new public video and it appears instantly — no rebuild needed. Fallback refreshed weekly by GitHub Actions.
-
-Explore all videos: [jorgearguello.net/blog](https://www.jorgearguello.net/blog/) — videos-only, per-request update.
 
 ---
 
@@ -193,12 +171,21 @@ Explore all videos: [jorgearguello.net/blog](https://www.jorgearguello.net/blog/
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=JorgeArguello1999&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000000&title_color=0A84FF&text_color=f5f5f7&icon_color=0A84FF" alt="GitHub stats" height="165" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JorgeArguello1999&layout=compact&theme=tokyonight&hide_border=true&bg_color=000000&title_color=0A84FF&text_color=f5f5f7" alt="Top langs" height="165" />
+<a href="https://github.com/JorgeArguello1999">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=JorgeArguello1999&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000000&title_color=0A84FF&text_color=f5f5f7&icon_color=0A84FF&count_private=true" alt="GitHub Stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JorgeArguello1999&layout=compact&theme=tokyonight&hide_border=true&bg_color=000000&title_color=0A84FF&text_color=f5f5f7&langs_count=6" alt="Top Langs" />
+</a>
 
-<img src="https://streak-stats.demolab.com?user=JorgeArguello1999&theme=tokyonight&hide_border=true&background=000000&fire=0A84FF&ring=0A84FF&currStreakLabel=f5f5f7" alt="streak" height="150" />
+<br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=JorgeArguello1999&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=15&margin-h=15" alt="trophies" />
+<a href="https://github.com/JorgeArguello1999">
+  <img height="150" src="https://streak-stats.demolab.com?user=JorgeArguello1999&theme=tokyonight&hide_border=true&background=000000&fire=0A84FF&ring=0A84FF&currStreakLabel=f5f5f7&currStreakNum=f5f5f7&sideNums=f5f5f7&sideLabels=f5f5f7" alt="GitHub Streak" />
+  <img height="150" src="https://github-readme-activity-graph.vercel.app/graph?username=JorgeArguello1999&bg_color=000000&color=f5f5f7&line=0A84FF&point=0A84FF&area=true&hide_border=true" alt="Activity Graph" />
+</a>
+
+<br/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=JorgeArguello1999&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=15&margin-h=15" alt="Trophies" />
 
 </div>
 
@@ -214,7 +201,7 @@ Explore all videos: [jorgearguello.net/blog](https://www.jorgearguello.net/blog/
 [![Instagram](https://img.shields.io/badge/Instagram-@al3x__argu-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/al3x_argu)
 [![YouTube](https://img.shields.io/badge/YouTube-@al3x__argu-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@al3x_argu)
 
-**🌐 Website:** [jorgearguello.net](https://www.jorgearguello.net) · **📝 Videos:** [jorgearguello.net/blog](https://www.jorgearguello.net/blog/) · **💼 LinkedIn:** [in/jorgearguello1999](https://www.linkedin.com/in/jorgearguello1999)
+**🌐 Website:** [jorgearguello.net](https://www.jorgearguello.net) · **💼 LinkedIn:** [in/jorgearguello1999](https://www.linkedin.com/in/jorgearguello1999) · **▶️ YouTube:** [@al3x_argu](https://www.youtube.com/@al3x_argu)
 
 > **Open to collaborations, freelance, and interesting conversations about Python, AI, Docker/Linux & IoT.** Reach out anytime — let's build something together!
 
