@@ -26,23 +26,7 @@
 
 ---
 
-<div align="center">
-
-### 🌐 Languages
-
-<a href="#-english"><img src="https://img.shields.io/badge/🇺🇸_English-0A84FF?style=for-the-badge" alt="English"></a>
-<a href="#-español"><img src="https://img.shields.io/badge/🇪🇸_Español-FF6F00?style=for-the-badge" alt="Español"></a>
-<a href="#-한국어"><img src="https://img.shields.io/badge/🇰🇷_한국어-2ea44f?style=for-the-badge" alt="한국어"></a>
-
-*Click a tab to jump to your language — tabs, not dropdowns, for a clean view.*
-
-</div>
-
----
-
-<h2 id="-english">🇺🇸 English</h2>
-
-### 👋 About Me
+## 👋 About Me
 
 I'm a **Fullstack Python Developer** focused on **AI, Docker/Linux server management, and IoT** — building scalable, maintainable solutions that help people and communities. I love **open source** and sharing knowledge openly.
 
@@ -62,56 +46,6 @@ I work across the stack with **Python (FastAPI, Django, Flask), AI/ML, and moder
 - 🔬 Exploring AI applications with Python — from prototypes to deployed services
 - 🛠️ Automating infrastructure with Docker & Linux for reproducible, low-maintenance servers
 - 📡 Bridging software and hardware — ESP32/Arduino projects that talk to the cloud
-
----
-
-<h2 id="-español">🇪🇸 Español</h2>
-
-### 👋 Sobre mí
-
-Soy **desarrollador Fullstack Python** enfocado en **IA, gestión de servidores Docker/Linux e IoT** — creo soluciones escalables y mantenibles que ayudan a personas y comunidades. Amo el **código abierto** y compartir conocimiento abiertamente.
-
-Trabajo en todo el stack con **Python (FastAPI, Django, Flask), IA/ML y frontend moderno**, desplegando y gestionando servicios con **Docker y Linux**. También construyo **soluciones IoT con ESP32 y Arduino**, conectando hardware a la nube. Contribuyo activamente a **[PyCommunity-es](https://github.com/PyCommunityES)** y disfruto llevar ideas a sistemas confiables y listos para producción.
-
-> **Pregúntame sobre:** `Python` · `IA/ML` · `Servidores Docker/Linux` · `IoT con ESP32/Arduino` · `Automatización` · `Arquitectura escalable`
-
-### 🚀 Lo que hago
-
-- 🐍 **Fullstack Python + IA** — APIs con FastAPI, pipelines IA/ML y frontends modernos
-- 🐳 **Servidores y DevOps** — Docker, Linux, CI/CD y despliegue de servicios escalables
-- 🔌 **IoT** — ESP32/Arduino, sensores, firmware y hardware conectado a la nube
-- 🤝 Colaboro con comunidades, especialmente PyCommunity-es
-
-### ✨ Destacados
-
-- 🔬 IA aplicada con Python — del prototipo al servicio desplegado
-- 🛠️ Infraestructura automatizada con Docker y Linux
-- 📡 Software y hardware conectados — proyectos ESP32/Arduino en la nube
-
----
-
-<h2 id="-한국어">🇰🇷 한국어</h2>
-
-### 👋 소개
-
-저는 **AI, Docker/Linux 서버 관리, IoT에 집중하는 풀스택 Python 개발자**로, 확장 가능하고 유지보수가 쉬운 솔루션을 만듭니다. **오픈소스**를 사랑하며 지식을 개방적으로 나누는 것을 중요하게 생각합니다.
-
-**Python(FastAPI, Django, Flask), AI/ML, 모던 프론트엔드**를 다루며 **Docker와 Linux**로 서비스를 배포·운영합니다. 또한 **ESP32와 Arduino로 하드웨어를 클라우드에 연결하는 IoT 솔루션**을 만듭니다. **[PyCommunity-es](https://github.com/PyCommunityES)** 에 적극 기여하며 아이디어를 안정적인 프로덕션 시스템으로 구현합니다.
-
-> **문의 가능 분야:** `Python` · `AI/ML` · `Docker/Linux 서버` · `ESP32/Arduino IoT` · `자동화` · `확장 가능한 아키텍처`
-
-### 🚀 하는 일
-
-- 🐍 **풀스택 Python + AI** — FastAPI 기반 API, AI/ML 파이프라인, 모던 프론트엔드
-- 🐳 **서버 & DevOps** — Docker, Linux, CI/CD, 확장 가능한 서비스 배포·운영
-- 🔌 **IoT** — ESP32/Arduino, 센서, 펌웨어 및 클라우드 연동 하드웨어
-- 🤝 커뮤니티 협업, 특히 PyCommunity-es
-
-### ✨ 하이라이트
-
-- 🔬 Python 기반 AI — 프로토타입부터 배포까지
-- 🛠️ Docker/Linux 기반 자동화된 인프라
-- 📡 소프트웨어와 하드웨어의 연결 — 클라우드 연동 ESP32/Arduino
 
 ---
 
@@ -217,7 +151,7 @@ Explore all repos: [github.com/JorgeArguello1999?tab=repositories](https://githu
 ```
 ├── docs/               # Website source (deployed to GitHub Pages)
 │   ├── index.html      # Home / gallery (hero: Python/AI/Docker/Linux/IoT)
-│   ├── about/          # About — fullstack Python AI + IoT bio (EN/ES/KO)
+│   ├── about/          # About — fullstack Python AI + IoT bio
 │   ├── projects/       # Projects — live GitHub API
 │   ├── blog/
 │   │   └── index.html  # Videos (YouTube, per-request update)
@@ -225,7 +159,7 @@ Explore all repos: [github.com/JorgeArguello1999?tab=repositories](https://githu
 │   │   ├── youtube.json # Videos from @al3x_argu (fallback)
 │   │   └── db.json      # Combined (youtube + site)
 │   ├── css/theme.css   # Dark theme, glass, responsive
-│   └── js/i18n.js      # EN / ES / KO engine (code in English)
+│   └── js/i18n.js      # i18n engine (code in English)
 ├── scripts/
 │   └── update-data.js  # Generates youtube.json/db.json (English code)
 └── .github/workflows/update-data.yml  # Weekly YouTube refresh
@@ -263,7 +197,7 @@ Frontend: `live RSS (api.allorigins.win) -> fallback to ../data/db.json -> ../da
 
 - Weekly on Mondays `00:00 UTC` (`cron: "0 6 * * 1"`) to refresh YouTube fallback
 - Manual: **Actions → Update static DB → Run workflow**
-- Code, comments, logs, and variable names are **always in English**; content supports **EN/ES/KO**
+- Code, comments, logs, and variable names are **always in English**
 
 ### Deploy
 
@@ -275,7 +209,7 @@ Frontend: `live RSS (api.allorigins.win) -> fallback to ../data/db.json -> ../da
 
 <div align="center">
 
-*© 1999 Jorge Argüello · Built with care and accessibility in mind · **Code in English** · Content in **EN/ES/KO** · Focus: **Fullstack Python · AI · Docker/Linux · ESP32/Arduino IoT***
+*© 1999 Jorge Argüello · Built with care and accessibility in mind · **Code and content in English** · Focus: **Fullstack Python · AI · Docker/Linux · ESP32/Arduino IoT***
 
 ⭐ Star this repo if you like it — and say hi on [Twitter](https://twitter.com/al3x_argu)! PRs and ideas welcome.
 
