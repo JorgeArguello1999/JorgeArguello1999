@@ -3,7 +3,7 @@
     "name": "Jorge Argüello",
     "handle": "@al3x_argu",
     "youtube": "https://www.youtube.com/@al3x_argu",
-    "updatedAt": "2026-09-28T12:24:27.629Z"
+    "updatedAt": "2026-10-05T13:04:28.758Z"
   },
   "youtube": {
     "channel": {
@@ -14,7 +14,7 @@
       "channelUrl": "https://www.youtube.com/channel/UCVgabwEiFAunNH6c7abqoCQ",
       "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVgabwEiFAunNH6c7abqoCQ"
     },
-    "updatedAt": "2026-09-28T12:24:27.629Z",
+    "updatedAt": "2026-10-05T13:04:28.758Z",
     "videos": [
       {
         "id": "uqhT36XLffI",
@@ -22,7 +22,7 @@
         "url": "https://www.youtube.com/watch?v=uqhT36XLffI",
         "embedUrl": "https://www.youtube.com/embed/uqhT36XLffI",
         "published": "2022-01-26T05:26:44+00:00",
-        "updated": "2026-09-07T05:21:32+00:00",
+        "updated": "2026-09-30T06:23:20+00:00",
         "author": "Jorge Alexander Arguello",
         "description": "Video explicativo para el uso del Software Gestor de Productos",
         "thumbnail": "https://i2.ytimg.com/vi/uqhT36XLffI/hqdefault.jpg",
