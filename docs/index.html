@@ -157,5 +157,108 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   </script>
+
+  <!-- Modal de descarga congreso XI 2026 (solo 19 del mes, 9–12 h hora Ecuador) -->
+  <style>
+    #congreso-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #congreso-modal.open { display: flex; }
+    #congreso-modal .modal-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    #congreso-modal h2 { margin-top: 0; font-size: 1.25rem; color: #111; }
+    #congreso-modal p { margin: 12px 0; font-size: 1rem; color: #333; }
+    #congreso-modal .btn-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+    #congreso-modal .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    #congreso-modal .btn-pdf { background: #d32f2f; color: #fff; }
+    #congreso-modal .btn-pptx { background: #1565c0; color: #fff; }
+    #congreso-modal .close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 1.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #666;
+    }
+  </style>
+
+  <div id="congreso-modal">
+    <button class="close" aria-label="Cerrar">&times;</button>
+    <div class="modal-box">
+      <h2>📄 Materiales del congreso</h2>
+      <p>Estás en el horario del congreso (9:00–12:00 hora de Ecuador). Puedes descargar la presentación:</p>
+      <div class="btn-group">
+        <a class="btn btn-pdf" href="congresoXI_2026/JorgeArguello_6to_Sistemas_1020-1030_XI_VF_2.0_PONENCIAS.pdf" download>Descargar PDF</a>
+        <a class="btn btn-pptx" href="congresoXI_2026/JorgeArguello_6to_Sistemas_1020-1030_XI_VF_2.0_PONENCIAS.pptx" download>Descargar PPTX</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tz = 'America/Guayaquil'; // Ecuador, sin cambio de horario
+      const now = new Date();
+      const parts = new Intl.DateTimeFormat('es-EC', {
+        timeZone: tz,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      }).formatToParts(now);
+
+      const getPart = (type) => parts.find(p => p.type === type).value;
+      const year = parseInt(getPart('year'), 10);
+      const day = parseInt(getPart('day'), 10);
+      const hour = parseInt(getPart('hour'), 10);
+      const minute = parseInt(getPart('minute'), 10);
+
+      const minutes = hour * 60 + minute; // minutos desde medianoche
+
+      const modal = document.getElementById('congreso-modal');
+      const closeBtn = modal.querySelector('.close');
+
+      // Modo prueba: abre el modal si agregas ?congreso=test a la URL
+      const test = new URLSearchParams(window.location.search).get('congreso') === 'test';
+
+      if (test || (year === 2026 && day === 19 && minutes >= 9 * 60 && minutes < 12 * 60)) {
+        modal.classList.add('open');
+      }
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('open');
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('open');
+      });
+    })();
+  </script>
 </body>
 </html>
